@@ -61,13 +61,17 @@ layout: default
 ##Share/Exchange Annotation Layers
   **person:** Rowan Dorin, Assistant Professor of History, focus on Medieval Europe
   
-  **need:** Save the annotations generated within his own class so that he and his TAs can use/edit/build upon those annotations from year to year and share with others.
+  **need:** "Save the annotations generated within his own class so that he and his TAs can use/edit/build upon those annotations from year to year and share with others."
   
-  **notes:** Rowan already uses Mirador and loves it. He imagines instructors sharing annotations on image collections to support teaching. He wants to be able to see how other instructors have used the material he is interested in. 
+  **notes:** "Rowan already uses Mirador and loves it. He imagines instructors sharing annotations on image collections to support teaching. He wants to be able to see how other instructors have used the material he is interested in." 
+  
+  **discovery:** When Rowan finds a collection he likes, he want to be able to access those images in context at the home institution. He wants to link back out of Mirador to the place from whence the IIIF logo was dragged. 
 
 ##Build a Collection for Use in an Online Learning Environment
   **person:** Marisa Galvez, Associate Professor of French and, by courtesy, of German Studies
   
-  **notes:** This interview is incomplete. Marisa has already used Mirador for teaching with support from Ben. In this case we are anticipating need to easily incorporate a collection into Lacuna, Coursera, etc.
+  **notes:** "This interview is incomplete. Marisa has already used Mirador for teaching with support from Ben. In this case we are anticipating need to easily incorporate a collection into Lacuna, Coursera, etc."
+  
+  **pedagogy:** "Marisa will be using collections of images that she has gathered. She wants the students to be able to access the metadata for the image/page/object. Currently, the metadata fields that appear in the "i" info panel (for SDR objects) seem somewhat arbitrary and not terribly helpful for students. There is a "logo" which is just the SUL rosette. What would a scholar use that for? There is a link to the mods/xml page for the purl rather than a link to the purl page itself. The "Rights" information is inconsistent with what appears on the purl page." 
   
   
