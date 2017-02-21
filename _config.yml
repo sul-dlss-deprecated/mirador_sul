@@ -4,8 +4,8 @@
 title:               Mirador at Stanford
 tagline:             'Discover. Compare. Zoom. Annotate. Share.'
 description:         ''
-url:                 ''
-baseurl:             ''
+url:                 'https://sul-dlss.github.io'
+baseurl:             '/mirador_sul'
 
 
 # Permalinks
