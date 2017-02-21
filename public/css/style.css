@@ -1,0 +1,234 @@
+/* ============================================================
+  NAVIGATION - DEMO NAV
+============================================================ */
+nav.demo-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+nav.demo-nav li {
+  display: inline-block;
+  font-family: "Roboto Slab", serif;
+  font-size: 12px;
+}
+nav.demo-nav a {
+  display: block;
+  padding: 3px 8px;
+  background-color: tomato;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+nav.demo-nav a:hover,
+nav.demo-nav li.active a {
+  background-color: #ff3814;
+}
+
+/* ============================================================
+  BASE OVERRIDES
+
+  Use this to make sure max width of wrapper is also max
+  video width in demo 3.
+============================================================ */
+.wrapper.demo3 {
+  max-width: 1600px;
+}
+
+
+#cmn-video-demo3__container {
+  position: relative;
+  margin: 0 0 20px 0;
+  height: 300px;
+  background-color: #282828;
+  overflow: hidden;
+}
+
+#cmn-video-demo3__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 600px;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#cmn-video-demo3__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  padding: 80px 20px;
+  text-align: center;
+}
+#cmn-video-demo3__content h2,
+#cmn-video-demo3__content p,
+#cmn-video-demo3__content a {
+  color: #fff;
+  text-shadow: -1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+#cmn-video-demo3__content h2 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  text-transform: lowercase;
+
+}
+#cmn-video-demo3__content p {
+  margin-bottom: 40px;
+}
+#cmn-video-demo3__content a {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 20px;
+  font-family: "Roboto Slab", serif;
+  border: solid 1px #fff;
+  -webkit-transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+  -moz-transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+  -o-transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+  transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+}
+#cmn-video-demo3__content a:hover {
+  background-color: #fff;
+  color: #787878;
+  text-shadow: none;
+}
+
+@media all and (min-width: 600px) {
+  #cmn-video-demo3__container {
+    height: 480px;
+  }
+
+  #cmn-video-demo3__video {
+    width: 1024px;
+  }
+
+  #cmn-video-demo3__content {
+    padding: 160px 20px;
+  }
+  #cmn-video-demo3__content h2 {
+    font-size: 3rem;
+  }
+  #cmn-video-demo3__content p,
+  #cmn-video-demo3__content a {
+    font-size: 18px;
+  }
+}
+@media all and (min-width: 1024px) {
+  #cmn-video-demo3__container {
+    height: 800;
+  }
+
+  #cmn-video-demo3__video {
+    width: 1600px;
+  }
+
+  #cmn-video-demo3__content {
+    padding: 200px 20px;
+  }
+  #cmn-video-demo3__content h2 {
+    font-size: 3rem;
+  }
+  #cmn-video-demo3__content p,
+  #cmn-video-demo3__content a {
+    font-size: 24px;
+  }
+}
+/* ============================================================
+FULL SCREEN BACKGROUND VIDEO
+============================================================ */
+#cmn-video-demo4__video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#cmn-video-demo4__content {
+  text-align: center;
+  margin-top: 24%;
+}
+
+.cmn-video-demo4__content--header {
+  margin-bottom: 40px;
+}
+.cmn-video-demo4__content--header h2,
+.cmn-video-demo4__content--header p,
+.cmn-video-demo4__content--header a {
+  color: #fff;
+  text-shadow: -1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+.cmn-video-demo4__content--header h2 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  text-transform: lowercase;
+}
+.cmn-video-demo4__content--header p {
+  margin-bottom: 40px;
+}
+.cmn-video-demo4__content--header a {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 20px;
+  font-family: "Roboto Slab", serif;
+  border: solid 1px #fff;
+  -webkit-transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+  -moz-transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+  -o-transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+  transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+}
+.cmn-video-demo4__content--header a:hover {
+  background-color: #fff;
+  color: #787878;
+  text-shadow: none;
+}
+
+.cmn-video-demo4__content--main {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.cmn-video-demo4__content--main h2 {
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+}
+.cmn-video-demo4__content--main p {
+  margin: 0 0 20px 0;
+  color: #fff;
+}
+
+@media all and (min-width: 600px) {
+  .cmn-video-demo4__content--header h2 {
+    font-size: 42px;
+  }
+  .cmn-video-demo4__content--header p,
+  .cmn-video-demo4__content--header a {
+    font-size: 18px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .cmn-video-demo4__content--header h2 {
+    font-size: 54px;
+  }
+  .cmn-video-demo4__content--header p,
+  .cmn-video-demo4__content--header a {
+    font-size: 24px;
+  }
+}

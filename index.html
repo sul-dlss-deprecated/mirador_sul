@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+  <!-- title and meta -->
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0" name="viewport">
+  <meta content="Mirador as a service at Stanford" name="description">
+
+  <title>Mirador at Stanford</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
+  <link rel="stylesheet" href="public/css/base.css">
+  <link rel="stylesheet" href="public/css/style.css">
+
+  <!-- js -->
+  <script src="js/modernizr.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper demo3">
+
+  <header class="primary-header clearfix">
+    <div class="logo">
+      <a href="http://library.stanford.edu">
+        <img src="public/img/core/logo.png" onerror="this.src=logo.png" alt="Mirador image viewer at Stanford University Libraries">
+      </a>
+    </div>
+    <nav class="primary-nav">
+
+    </nav>
+  </header><!-- /.primary-header -->
+
+
+  <main>
+    
+    <div class="container">
+      <div id="cmn-video-demo4__content">
+        <div class="cmn-video-demo4__content--header">
+        <img src="public/img/core/mirador-logo.png">
+        <h2>Mirador at Stanford</h2>
+        <p>Discover. Compare. Zoom. Annotate. Share.</p>
+        <a href="#">Learn more</a>
+        </div>
+      </div>
+      <!-- <div class="cmn-video-demo4__content-main">-->
+
+<!-- <p>Mirador is much more than an online image viewer. Built on IIF (International Image Interoperability Framework) Mirador makes it possible to draw together high resolution images of paintings, photographs, manuscripts, maps, and digitized documents from collections at Stanford University Libraries, the Bodleian, Folger Shakespeare Library, Davidrumsey.com, NASA Images, Gallica, the Yale Center for British Art, the Wellcome Library and more.</p>
+
+<p>Mirador is an example of what digital does best for research and teaching with images. It provides access to digitized image collections around the world from your desktop. It supplements hands-on work with fragile archival material, allowing mark-up, side-by-side comparison and the ability to zoom in to see the finest details. Both image selections and the notes or transcriptions can be saved and shared with others. These features make both citation and collaboration much easier.</p> 
+      </div>
+    </div>-->
+
+  </main><!-- /main -->
+
+  <video id="cmn-video-demo4__video" autoplay muted loop>
+    <source src="public/media/out.mp4" type="video/mp4">
+    <!-- <source src="media/demo.ogv" type="video/ogg">
+    <source src="media/demo.webm" type="video/webm"> -->
+    Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
+  </video>
+  
+</div><!-- /#wrapper -->
+
+<!-- js -->
+<script src="js/polyfill.object-fit.js"></script>
+<script>
+  objectFit.polyfill({
+    selector: 'video',
+    fittype: 'cover'
+  });
+</script>
+
+<!-- ads -->
+<!-- <script src="js/fusionad.js"></script> -->
+
+<!-- analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-34160351-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+</body>
+</html>
