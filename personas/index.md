@@ -1,3 +1,8 @@
+---
+
+layout: default
+
+---
 
 ##Transliteration of Manuscripts
   **person:** Ali Yaycioglu, Historian of Early Modern Turkey and the Middle East
