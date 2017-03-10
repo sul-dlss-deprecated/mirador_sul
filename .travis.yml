@@ -1,0 +1,22 @@
+language: ruby
+
+sudo: false
+
+notifications:
+  email: false
+
+rvm:
+  - 2.4.0
+
+env:
+  - "RAILS_ENV=test"
+
+bundler_args: --without production deployment
+
+before_script:
+  - bundle exec rails db:migrate
+
+# blocklist
+branches:
+  except:
+  - gh-pages
