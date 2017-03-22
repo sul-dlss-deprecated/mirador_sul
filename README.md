@@ -1,24 +1,22 @@
-# README
+# Mirador @ SUL
+[![Build Status](https://travis-ci.org/sul-dlss/mirador_sul.svg?branch=master)](https://travis-ci.org/sul-dlss/mirador_sul) [![Coverage Status](https://coveralls.io/repos/github/sul-dlss/mirador_sul/badge.svg?branch=update-readme)](https://coveralls.io/github/sul-dlss/mirador_sul?branch=update-readme)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+After cloning the repository, install the dependencies:
 
-* Ruby version
+```sh
+$ bundle install
+```
 
-* System dependencies
+## Running the tests
 
-* Configuration
+```sh
+$ bundle exec rake ci
+```
 
-* Database creation
+## Running the server
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+$ rails s
+```
