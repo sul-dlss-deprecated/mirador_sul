@@ -12,6 +12,7 @@ gem 'okcomputer'
 gem 'config'
 gem 'faraday'
 gem 'high_voltage', '~> 3.0.0'
+gem 'devise'
 
 group :production do
   gem 'pg'
