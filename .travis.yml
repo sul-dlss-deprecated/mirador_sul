@@ -14,7 +14,7 @@ env:
 bundler_args: --without production deployment
 
 before_script:
-  - bundle exec rails db:migrate
+  - bin/rails db:test:prepare
 
 # blocklist
 branches:
