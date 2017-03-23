@@ -5,21 +5,6 @@ RSpec.describe User, type: :model do
   context 'generic user' do
     let(:subject) { create(:user) }
 
-    it 'computes password digest' do
-      subject.password_digest = nil
-      subject.password = 'something-password-like'
-      expect(subject.password_digest).to match(/.+/) # autosets
-    end
-
-    it 'only accepts controlled vocab for source' do
-      %w(local sunetid).each do |s|
-        subject.source = s
-        expect(subject.valid?).to be_truthy
-      end
-      subject.source = 'bad-value'
-      expect(subject.valid?).to be_falsy
-    end
-
     context 'with many collections' do
       before do
         (1..n).each do |_i|
