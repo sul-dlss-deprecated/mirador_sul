@@ -102,6 +102,7 @@ GEM
     ffi (1.9.18)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    high_voltage (3.0.0)
     honeybadger (3.1.0)
     i18n (0.8.1)
     json (2.0.3)
@@ -240,6 +241,7 @@ DEPENDENCIES
   dlss-capistrano
   factory_girl_rails (~> 4.8)
   faraday
+  high_voltage (~> 3.0.0)
   honeybadger
   listen (~> 3.0.5)
   okcomputer
@@ -256,4 +258,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.14.5
+   1.14.6

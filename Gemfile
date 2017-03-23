@@ -11,6 +11,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'okcomputer'
 gem 'config'
 gem 'faraday'
+gem 'high_voltage', '~> 3.0.0'
 
 group :production do
   gem 'pg'
