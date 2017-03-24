@@ -24,3 +24,7 @@ en:
     create: Collection was successfully created.
     update: Collection was successfully updated.
     destroy: Collection was successfully destroyed.
+  pages:
+    home:
+      log_in: Log in
+      log_out: Log out
