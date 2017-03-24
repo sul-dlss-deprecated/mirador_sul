@@ -5,11 +5,13 @@ FactoryGirl.define do
     name
     sequence(:email) { |n| "jdoe#{n}@example.com" }
     source 'local'
+    password 'password'
   end
 
   factory :user_stanford, class: User do
     name
     sequence(:email) { |n| "jdoe#{n}@stanford.edu" }
     source 'sunetid'
+    password 'password'
   end
 end
