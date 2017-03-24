@@ -41,6 +41,7 @@ group :test, :development do
   gem 'rack-console'
   gem 'rubocop'
   gem 'rubocop-rspec'
+  gem 'capybara'
 end
 
 group :deployment do
