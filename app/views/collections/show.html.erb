@@ -1,0 +1,12 @@
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-12'>
+      <p id="notice"><%= notice %></p>
+      
+      <h3><%= @collection.name %></h3>
+    
+      <%= link_to 'Edit', edit_collection_path(@collection) %> |
+      <%= link_to 'Back', collections_path %>
+    </div>
+  </div>
+</div>
