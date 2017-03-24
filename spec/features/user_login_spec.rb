@@ -11,14 +11,19 @@ RSpec.feature 'User creation/login', :type => :feature do
 
     expect(User.last.email).to eq 'test@example.com'
   end
-  scenario 'An existing user can login' do
+  scenario 'An existing user can login and logout' do
     create(:user, email: 'yolo@example.com')
-    visit user_session_path
+    visit root_path
+    click_link 'Log in'
 
     fill_in 'Email', with: 'yolo@example.com'
     fill_in 'Password', with: 'password'
     click_button 'Log in'
 
     expect(User.last.sign_in_count).to eq 1
+    expect(page).to have_link 'Log out'
+
+    click_link 'Log out'
+    expect(page).to have_link 'Log in'
   end
 end
