@@ -8,7 +8,8 @@
       <ol><%= render @collection.manifests %></ol>
 
       <%= link_to 'Edit', edit_collection_path(@collection) %> |
-      <%= link_to 'Back', collections_path %>
+      <%= link_to 'Back', collections_path %> |
+      <%= link_to 'New Workspace', new_collection_workspace_path(@collection) %>
     </div>
   </div>
 </div>

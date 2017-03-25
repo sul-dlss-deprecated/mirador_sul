@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   resources :collections do
     resources :manifests, only: [:create, :destroy]
+    resources :workspaces, only: [:new, :create, :show]
   end
 end

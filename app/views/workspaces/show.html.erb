@@ -1,0 +1,5 @@
+<h1><%= t(:'.heading', name: @workspace.name) %></h1>
+
+<%= mirador_tag(@workspace.mirador_options) %>
+
+<%= link_to 'Back', collection_path(@collection) %>
