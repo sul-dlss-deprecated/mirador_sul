@@ -9,6 +9,8 @@ RSpec.describe CollectionsController, type: :controller do
     }
   end
 
+  let(:invalid_attributes) { { name: nil, user: user } }
+
   before do
     sign_in user
   end
@@ -63,6 +65,13 @@ RSpec.describe CollectionsController, type: :controller do
         expect(response).to redirect_to(Collection.last)
       end
     end
+
+    context 'with invalid params' do
+      it 'renders the new page' do
+        post :create, params: { collection: invalid_attributes }
+        expect(response).to render_template('new')
+      end
+    end
   end
 
   describe 'PUT #update' do
@@ -86,6 +95,14 @@ RSpec.describe CollectionsController, type: :controller do
         collection = Collection.create! valid_attributes
         put :update, params: {id: collection.to_param, collection: valid_attributes}
         expect(response).to redirect_to(collection)
+      end
+    end
+
+    context 'with invalid params' do
+      it 'renders  the edit page' do
+        collection = Collection.create! valid_attributes
+        put :update, params: { id: collection.to_param, collection: invalid_attributes }
+        expect(response).to render_template('edit')
       end
     end
   end
