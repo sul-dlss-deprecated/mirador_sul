@@ -2,5 +2,9 @@
 
 <%= render 'form', collection: @collection %>
 
+<ol><%= render @collection.manifests %></ol>
+
+<%= render 'manifests/form', collection: @collection %>
+
 <%= link_to 'Show', @collection %> |
 <%= link_to 'Back', collections_path %>

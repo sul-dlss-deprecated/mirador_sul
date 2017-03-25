@@ -53,5 +53,6 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
 
   config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::IntegrationHelpers, type: :feature
   config.include RequestSpecHelper, type: :request
 end
