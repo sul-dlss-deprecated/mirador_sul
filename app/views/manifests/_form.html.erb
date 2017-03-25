@@ -1,0 +1,9 @@
+<%= form_for([@collection, Manifest.new], html: { class: 'form-inline'}) do |f| %>
+
+  <%= f.label :url, class: 'mr-sm-2' %>
+  <%= f.text_field :url, class: 'form-control' %>
+
+  <div class="actions">
+    <%= f.submit t('manifests.submit_button'), class: 'btn btn-primary' %>
+  </div>
+<% end %>
