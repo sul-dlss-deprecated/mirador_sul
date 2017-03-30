@@ -5,7 +5,7 @@ RSpec.describe WorkspacesController, type: :controller do
   let(:collection) { create(:collection, user: user) }
   before { sign_in user }
 
-  let(:valid_params) { { name: 'Workspace1', collection: collection } }
+  let(:valid_params) { { name: 'Workspace1', collection: collection, user: user } }
   let(:invalid_params) { { name: nil } }
 
   describe 'GET #new' do
@@ -22,7 +22,7 @@ RSpec.describe WorkspacesController, type: :controller do
   describe 'GET #show' do
     it 'assigns the requested workspace as @workspace' do
       workspace = Workspace.create! valid_params
-      get :show, params: { collection_id: collection.id, id: workspace.to_param }
+      get :show, params: { id: workspace.to_param }
       expect(assigns(:workspace)).to eq(workspace)
     end
   end

@@ -25,13 +25,13 @@ RSpec.describe 'Workspaces', type: :request do
     end
   end
 
-  describe 'GET /collections/:collection_id/workspaces/:id' do
+  describe 'GET /workspaces/:id' do
     let(:workspace) { create(:workspace, collection: collection, data: { height: '100px' }.to_json) }
     context 'an authorized user' do
       let(:collection) { create(:collection, user: user) }
 
       it 'is allowed' do
-        get collection_workspace_path(collection, workspace)
+        get workspaces_path(collection, workspace)
         expect(response).to have_http_status(200)
       end
     end

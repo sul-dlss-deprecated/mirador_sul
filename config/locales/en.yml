@@ -41,6 +41,8 @@ en:
   workspaces:
     create: Workspace was successfully created.
     create_error: There was a problem creating the workspace.
+    index:
+      header: My Workspaces
     new:
       heading: New Workspace
     show:

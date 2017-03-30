@@ -7,7 +7,7 @@ RSpec.describe WorkspacesController, type: :routing do
     end
 
     it 'routes to #show' do
-      expect(get: '/collections/1/workspaces/2').to route_to('workspaces#show', collection_id: '1', id: '2')
+      expect(get: '/workspaces/2').to route_to('workspaces#show', id: '2')
     end
 
     it 'routes to #create' do
