@@ -37,12 +37,25 @@ RSpec.feature 'Workspace Management', type: :feature do
       url = 'http://manifest-host/iiif/manifest.json'
       workspace = create(:workspace, collection: collection, data: {
         options: { data: [url] }
-      }.to_json)
-      visit "/collections/#{collection.id}/workspaces/#{workspace.id}"
+      }.to_json, user: user)
+      visit "/workspaces/#{workspace.id}"
 
       expect(page).to have_css('h1', text: "Workspace: #{workspace.name}")
       expect(page).to have_css('script', visible: false, text: /Mirador/)
       expect(page).to have_css('script', visible: false, text: /#{url}/)
+    end
+
+    scenario 'I can destroy a workspace' do
+      url = 'http://manifest-host/iiif/manifest.json'
+      create(:workspace, collection: collection, data: {
+        options: { data: [url] }
+      }.to_json, user: user)
+      visit '/workspaces'
+
+      click_link 'Destroy'
+
+      expect(page).to have_css 'h1', text: 'My Workspaces'
+      expect(page).to_not have_css 'a', text: 'Destroy'
     end
   end
 end

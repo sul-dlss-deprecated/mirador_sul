@@ -66,4 +66,23 @@ RSpec.describe 'Workspaces', type: :request do
       end
     end
   end
+
+  describe 'DELETE /workspaces/:id' do
+    context 'an authorized user' do
+      let(:workspace) { create(:workspace, user: user) }
+      it 'is allowed' do
+        delete workspace_path(workspace)
+        expect(response).to have_http_status(302)
+      end
+    end
+
+    context 'an anonymous user' do
+      let(:workspace) { create(:workspace) }
+      it 'is not allowed' do
+        expect do
+          delete workspace_path(workspace)
+        end.to raise_error(CanCan::AccessDenied)
+      end
+    end
+  end
 end

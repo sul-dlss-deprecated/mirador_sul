@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     resources :workspaces, only: [:new, :create]
   end
 
-  resources :workspaces, only: [:index, :show]
+  resources :workspaces, only: [:index, :show, :destroy]
 end

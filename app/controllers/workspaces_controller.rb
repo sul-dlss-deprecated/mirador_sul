@@ -1,8 +1,8 @@
 class WorkspacesController < ApplicationController
-  load_and_authorize_resource :collection, except: [:index, :show]
-  load_and_authorize_resource :workspace, through: :collection, except: [:index, :show]
+  load_and_authorize_resource :collection, except: [:index, :show, :destroy]
+  load_and_authorize_resource :workspace, through: :collection, except: [:index, :show, :destroy]
 
-  load_and_authorize_resource :workspace, only: [:index, :show]
+  load_and_authorize_resource :workspace, only: [:index, :show, :destroy]
 
   # GET /workspaces
   def index; end
@@ -23,6 +23,12 @@ class WorkspacesController < ApplicationController
     else
       redirect_to @collection, alert: t('workspaces.create_error')
     end
+  end
+
+  # DELETE /workspaces/:id
+  def destroy
+    @workspace.destroy
+    redirect_to workspaces_url, notice: t('collections.destroy')
   end
 
   private
