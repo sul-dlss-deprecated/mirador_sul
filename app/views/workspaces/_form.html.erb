@@ -1,0 +1,9 @@
+<%= form_for([@collection, @workspace], html: { class: 'form-inline' }) do |f| %>
+  <%= f.label :name, class: 'mr-sm-2' %>
+  <%= f.text_field :name, class: 'form-control'  %>
+
+  <%= f.hidden_field :data %>
+  <div class="actions">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

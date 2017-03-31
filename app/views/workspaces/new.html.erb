@@ -1,0 +1,7 @@
+<h1><%= t(:'.heading') %></h1>
+
+<%= render 'form' %>
+
+<%= mirador_tag(@collection.mirador_options) %>
+
+<%= link_to 'Back', collection_path(@collection) %>

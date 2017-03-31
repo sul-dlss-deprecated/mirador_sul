@@ -38,3 +38,12 @@ en:
       log_in: Log in
       log_out: Log out
       my_collections: My collections
+  workspaces:
+    create: Workspace was successfully created.
+    create_error: There was a problem creating the workspace.
+    index:
+      header: My Workspaces
+    new:
+      heading: New Workspace
+    show:
+      heading: "Workspace: %{name}"
