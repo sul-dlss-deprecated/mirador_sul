@@ -11,7 +11,15 @@ class Collection < ApplicationRecord
     {
       height: MiradorSul::Application.config.mirador_workspace_height,
       options: {
-        data: manifest_urls.map { |manifest_url| { manifestUri: manifest_url } }
+        data: manifest_urls.map { |manifest_url| { manifestUri: manifest_url } },
+        mainMenuSettings: {
+          userButtons: [
+            {
+              label: 'Save',
+              iconClass: 'fa fa-lg fa-fw fa-floppy-o'
+            }
+          ]
+        }
       }
     }
   end

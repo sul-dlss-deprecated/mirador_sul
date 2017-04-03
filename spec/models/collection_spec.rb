@@ -45,5 +45,10 @@ RSpec.describe Collection, type: :model do
         expect(data[:manifestUri]).to match %r{example.com/iiif/\d*/manifest.json}
       end
     end
+
+    it 'sets up a Save button in the mainmenu' do
+      user_buttons = subject.mirador_options[:options][:mainMenuSettings][:userButtons]
+      expect(user_buttons[0][:label]).to eq 'Save'
+    end
   end
 end
