@@ -30,6 +30,7 @@
     // Search endpoint for all annotations with a given URI in options
     search: function(options, successCallback, errorCallback) {
       var _this = this;
+      _this.annotationsList = [];
 
       jQuery.ajax({
         url: '<%= workspace_annotations_path(@workspace, format: 'json') %>',
