@@ -4,6 +4,8 @@ class Workspace < ApplicationRecord
   belongs_to :collection
   belongs_to :user
 
+  has_many :annotations
+
   serialize :data, JSON
 
   def data
@@ -12,6 +14,11 @@ class Workspace < ApplicationRecord
   end
 
   def mirador_options
-    JSON.parse(data).deep_symbolize_keys
+    config = JSON.parse(data).deep_symbolize_keys
+    config[:options].merge!({:annotationEndpoint => {
+      :name => 'Storage',
+      :module => 'Endpoint'
+    }})
+    config
   end
 end

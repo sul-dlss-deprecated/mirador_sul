@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   end
 
   resources :workspaces, only: [:index, :show, :destroy]
+
+  resources :workspaces do
+      resources :annotations, only: [:show, :new, :create, :index]
+  end
+
+  resources :annotations, only: [:show, :update, :destroy]
 end

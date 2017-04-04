@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170329181652) do
+ActiveRecord::Schema.define(version: 20170401011619) do
+
+  create_table "annotations", force: :cascade do |t|
+    t.integer  "workspace_id"
+    t.string   "uuid"
+    t.binary   "data"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["uuid"], name: "index_annotations_on_uuid"
+    t.index ["workspace_id"], name: "index_annotations_on_workspace_id"
+  end
 
   create_table "collections", force: :cascade do |t|
     t.string   "name"

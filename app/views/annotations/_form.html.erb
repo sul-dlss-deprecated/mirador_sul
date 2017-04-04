@@ -1,0 +1,10 @@
+<%= form_for([@workspace, @annotation], html: { class: 'form-inline' }) do |f| %>
+  <%= f.label :uuid, class: 'mr-sm-2' %>
+  <%= f.text_field :uuid, class: 'form-control' %>
+
+  <%= f.label :data, class: 'mr-sm-2' %>
+  <%= f.text_area :data, class: 'form-control' %>
+  <div class="actions">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>
