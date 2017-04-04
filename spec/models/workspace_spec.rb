@@ -17,8 +17,8 @@ RSpec.describe Workspace, type: :model do
       it "returns the collection's mirador_options as json" do
         data = Workspace.new(collection: collection).data
         expect(data).to be_a String
-        expect(JSON.parse(data)).to have_key('height')
-        expect(JSON.parse(data)).to have_key('options')
+        expect(JSON.parse(data)).to have_key('id')
+        expect(JSON.parse(data)).to have_key('data')
       end
 
       it 'returns the correct data when persisted' do
@@ -29,15 +29,9 @@ RSpec.describe Workspace, type: :model do
   end
 
   describe '#mirador_options' do
-    it 'parses the json string into a hash' do
-      expect(subject.mirador_options).to be_a Hash
-    end
-
-    it 'deep symbolizes the keys' do
-      subject.data = { 'abc' => { 'xyz' => 'def' } }.to_json
-
-      expect(subject.mirador_options).to have_key(:abc)
-      expect(subject.mirador_options[:abc]).to have_key(:xyz)
+    it 'poxies the data attribute for consistency with Collection' do
+      subject.data = { a: :b }.to_json
+      expect(subject.mirador_options).to eq({ a: :b }.to_json)
     end
   end
 end

@@ -14,6 +14,10 @@ RSpec.describe WorkspacesController, type: :routing do
       expect(post: '/collections/1/workspaces').to route_to('workspaces#create', collection_id: '1')
     end
 
+    it 'routes to #create' do
+      expect(put: '/workspaces/1').to route_to('workspaces#update', id: '1')
+    end
+
     it 'routes to #destroy' do
       expect(delete: '/workspaces/1').to route_to('workspaces#destroy', id: '1')
     end

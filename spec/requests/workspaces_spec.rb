@@ -67,6 +67,27 @@ RSpec.describe 'Workspaces', type: :request do
     end
   end
 
+  describe 'PUT /manifests/:manifest_id' do
+    context 'an authorized user' do
+      let(:workspace) { create(:workspace, user: user, data: { height: '100px' }.to_json) }
+      it 'is allowed' do
+        put workspace_path(id: workspace.id, workspace: { name: 'New Workspace 1' })
+
+        expect(response).to have_http_status(302)
+        expect(Workspace.last.name).to eq 'New Workspace 1'
+      end
+    end
+
+    context 'an anonymous user' do
+      let(:workspace) { create(:workspace, data: { height: '100px' }.to_json) }
+      it 'is not allowed' do
+        expect do
+          put workspace_path(id: workspace.id, workspace: { name: 'does not matter' })
+        end.to raise_error(CanCan::AccessDenied)
+      end
+    end
+  end
+
   describe 'DELETE /workspaces/:id' do
     context 'an authorized user' do
       let(:workspace) { create(:workspace, user: user) }

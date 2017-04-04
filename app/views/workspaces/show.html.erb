@@ -1,5 +1,13 @@
 <h1><%= t(:'.heading', name: @workspace.name) %></h1>
 
-<%= mirador_tag(@workspace.mirador_options) %>
+<div id="viewer" data-workspace-update-url="<%= workspace_path(@workspace, format: :json) %>"></div>
+
+<script>
+  $(function() {
+    myMiradorInstance = Mirador(
+      <%= @workspace.mirador_options.html_safe %>
+    );
+  });
+</script>
 
 <%= link_to 'Back', workspaces_path %>

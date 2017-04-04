@@ -12,15 +12,6 @@ RSpec.feature 'Workspace Management', type: :feature do
 
     before { sign_in(user) }
 
-    scenario 'A mirador instance is available on the new workspace form' do
-      visit "/collections/#{collection.id}"
-      click_link 'New Workspace'
-
-      expect(page).to have_css('script', visible: false, text: /Mirador/)
-      expect(page).to have_css('script', visible: false, text: /#{manifest1.url}/)
-      expect(page).to have_css('script', visible: false, text: /#{manifest2.url}/)
-    end
-
     scenario 'I can create a new workspace from a collection' do
       visit "/collections/#{collection.id}"
 

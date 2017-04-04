@@ -33,21 +33,17 @@ RSpec.describe Collection, type: :model do
   end
 
   describe '#mirador_options' do
-    it 'has the configured height' do
-      expect(subject.mirador_options[:height]).to eq '600px'
-    end
-
     it 'has the associated manifestUri in the data options' do
       3.times.each { subject.manifests << create(:manifest) }
 
-      data_options = subject.mirador_options[:options][:data]
+      data_options = subject.mirador_options[:data]
       data_options.each do |data|
         expect(data[:manifestUri]).to match %r{example.com/iiif/\d*/manifest.json}
       end
     end
 
     it 'sets up a Save button in the mainmenu' do
-      user_buttons = subject.mirador_options[:options][:mainMenuSettings][:userButtons]
+      user_buttons = subject.mirador_options[:mainMenuSettings][:userButtons]
       expect(user_buttons[0][:label]).to eq 'Save'
     end
   end
