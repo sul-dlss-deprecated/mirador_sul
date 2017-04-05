@@ -18,6 +18,11 @@ gem 'jquery-rails'
 gem 'cancancan'
 gem 'mirador_rails'
 
+# for asset pipeline
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
