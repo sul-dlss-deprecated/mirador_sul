@@ -1,5 +1,14 @@
-<% if user_signed_in? %>
-  <%= link_to t(:'.log_out'), destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to t(:'.log_in'), new_user_session_path  %>
-<% end %>
+<div>
+  <div class='demo-video-masthead'>
+    <div class='masthead-content'>
+      <%= image_tag 'mirador-logo' %>
+      <h2><%= t(:application_name) %></h2>
+      <p>Discover. Compare. Zoom. Annotate. Share.</p>
+      <%= link_to 'Learn more', page_path('about-iiif'), class: 'btn btn-lg btn-outline-secondary' %>
+    </div>
+  </div>
+  <video class='masthead-video' autoplay muted loop>
+    <source src="https://github.com/sul-dlss/mirador_sul/blob/gh-pages/public/media/cal_island_high.mp4?raw=true" type='video/mp4'>
+    Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
+  </video>
+</div>

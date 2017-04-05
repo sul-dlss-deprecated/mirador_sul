@@ -1,0 +1,22 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-stanford">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="<%= root_path %>"><%= t(:application_name) %></a>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      </li>
+    </ul>
+    <div class="pull-right">
+      <div class='nav-item'>
+        <% if user_signed_in? %>
+          <%= link_to t('user.log_out'), destroy_user_session_path, method: :delete, class: 'nav-link' %>
+        <% else %>
+          <%= link_to t('user.log_in'), new_user_session_path, class: 'nav-link'  %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</nav>

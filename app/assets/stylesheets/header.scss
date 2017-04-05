@@ -1,0 +1,12 @@
+
+@include bg-variant('.bg-stanford', $color-cardinal-red);
+
+.bg-stanford {
+  .nav-link{
+    color: $navbar-inverse-color;
+
+    @include hover-focus {
+      color: $navbar-inverse-hover-color;
+    }
+  }
+}
