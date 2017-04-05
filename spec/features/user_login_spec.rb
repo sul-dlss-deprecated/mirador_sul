@@ -26,4 +26,15 @@ RSpec.feature 'User creation/login', :type => :feature do
     click_link 'Log out'
     expect(page).to have_link 'Log in'
   end
+  scenario 'After login, user is taken to the collections view' do
+    create(:user, email: 'yolo@example.com')
+    visit root_path
+    click_link 'Log in'
+
+    fill_in 'Email', with: 'yolo@example.com'
+    fill_in 'Password', with: 'password'
+    click_button 'Log in'
+
+    expect(current_path).to eql(collections_path)
+  end
 end
