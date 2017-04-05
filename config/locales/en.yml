@@ -26,6 +26,7 @@ en:
         url: Manifest URL
   application_name: mirador@stanford
   collections:
+    navbar: Collections
     create: Collection was successfully created.
     update: Collection was successfully updated.
     destroy: Collection was successfully destroyed.
@@ -41,6 +42,7 @@ en:
     log_in: Log in
     log_out: Log out
   workspaces:
+    navbar: Workspaces
     create: Workspace was successfully created.
     create_error: There was a problem creating the workspace.
     index:
