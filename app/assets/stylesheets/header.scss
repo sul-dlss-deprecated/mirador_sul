@@ -2,11 +2,15 @@
 @include bg-variant('.bg-stanford', $color-cardinal-red);
 
 .bg-stanford {
-  .nav-link{
-    color: $navbar-inverse-color;
+  .nav-item{
+    display: inline-flex;
 
-    @include hover-focus {
-      color: $navbar-inverse-hover-color;
+    .nav-link{
+      color: $navbar-inverse-color;
+
+      @include hover-focus {
+        color: $navbar-inverse-hover-color;
+      }
     }
   }
 }
