@@ -29,9 +29,17 @@ RSpec.describe Workspace, type: :model do
   end
 
   describe '#mirador_options' do
-    it 'poxies the data attribute for consistency with Collection' do
+    it 'includes original configuration keys' do
       subject.data = { a: :b }.to_json
-      expect(subject.mirador_options).to eq({ a: :b }.to_json)
+      expect(JSON.parse(subject.mirador_options)).to have_key 'a'
+    end
+    it 'merges in the userLogo options for custom title' do
+      subject.name = 'workspace_title'
+      parsed_json = JSON.parse(subject.mirador_options)
+      expect(parsed_json).to have_key 'mainMenuSettings'
+      expect(parsed_json['mainMenuSettings']).to have_key 'userLogo'
+      expect(parsed_json['mainMenuSettings']['userLogo']).to have_key 'label'
+      expect(parsed_json['mainMenuSettings']['userLogo']['label']).to eq('workspace_title')
     end
   end
 end

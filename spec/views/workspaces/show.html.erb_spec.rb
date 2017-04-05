@@ -9,10 +9,6 @@ RSpec.describe 'workspaces/show', type: :view do
     render
   end
 
-  it 'renders the heading' do
-    expect(rendered).to have_css('h1', text: "Workspace: #{workspace.name}")
-  end
-
   it 'renders a mirador script tag' do
     expect(rendered).to have_css('script', text: /Mirador/, visible: false)
   end
