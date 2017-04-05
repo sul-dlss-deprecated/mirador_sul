@@ -24,6 +24,7 @@ en:
     attributes:
       manifest:
         url: Manifest URL
+  application_name: mirador@stanford
   collections:
     create: Collection was successfully created.
     update: Collection was successfully updated.

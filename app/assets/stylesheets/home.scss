@@ -25,10 +25,6 @@
   margin-bottom: 40px;
   text-shadow: -1px 1px 4px rgba(0, 0, 0, 0.6);
 
-  h2 {
-    text-transform: lowercase;
-  }
-
   .btn-outline-secondary {
     &:focus {
       color: $btn-secondary-border;
