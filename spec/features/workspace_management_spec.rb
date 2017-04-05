@@ -20,7 +20,6 @@ RSpec.feature 'Workspace Management', type: :feature do
       fill_in 'Name', with: 'My New Workspace'
       click_button 'Create Workspace'
 
-      expect(page).to have_css('h1', text: 'Workspace: My New Workspace')
       expect(Workspace.last.name).to eq 'My New Workspace'
     end
 
@@ -31,7 +30,6 @@ RSpec.feature 'Workspace Management', type: :feature do
       }.to_json, user: user)
       visit "/workspaces/#{workspace.id}"
 
-      expect(page).to have_css('h1', text: "Workspace: #{workspace.name}")
       expect(page).to have_css('script', visible: false, text: /Mirador/)
       expect(page).to have_css('script', visible: false, text: /#{url}/)
     end
@@ -45,7 +43,6 @@ RSpec.feature 'Workspace Management', type: :feature do
 
       click_link 'Destroy'
 
-      expect(page).to have_css 'h1', text: 'My Workspaces'
       expect(page).to_not have_css 'a', text: 'Destroy'
     end
   end
