@@ -2,6 +2,7 @@
 @import 'sul-styles';
 @import 'header';
 @import 'home';
+@import 'collection';
 @import 'workspace';
 
 // Mirador does not like the Bootstrap reboot box-sizing from reboot.scss
@@ -15,4 +16,14 @@ html .mirador-viewer {
   *::after {
     box-sizing: content-box; // 1
   }
+}
+
+.row {
+  &.odd {
+    background-color: $table-bg-accent;
+  }
+}
+
+.collection-result {
+  padding: 10px 5px;
 }

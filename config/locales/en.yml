@@ -27,14 +27,17 @@ en:
   application_name: mirador@stanford
   collections:
     navbar: Collections
-    index:
-      new_workspace: New Workspace
     create: Collection was successfully created.
     update: Collection was successfully updated.
     destroy: Collection was successfully destroyed.
     show:
       manifests: Manifests
       workspaces: Workspaces
+    collection:
+      create_workspace: Create workspace from this collection
+      destroy: Destroy collection
+      edit: Edit collection
+      workspaces_count: "%{pluralization} created from this collection."
   manifests:
     create: Manifest was successfully created.
     create_error: There was a problem creating the manifest.
