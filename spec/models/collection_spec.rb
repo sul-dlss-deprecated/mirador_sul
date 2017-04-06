@@ -37,11 +37,15 @@ RSpec.describe Collection, type: :model do
 
   context 'with many workspaces' do
     before do
-      (1..n).each { subject.workspaces << create(:workspace) }
+      (1..n).each { create(:workspace, collection: subject) }
     end
 
     it 'holds them' do
       expect(subject.workspaces.length).to eq(n)
+    end
+
+    it 'caches a count of them' do
+      expect(subject.workspaces_count).to eq(n)
     end
   end
 
