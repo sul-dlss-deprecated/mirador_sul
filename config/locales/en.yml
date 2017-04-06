@@ -27,6 +27,8 @@ en:
   application_name: mirador@stanford
   collections:
     navbar: Collections
+    index:
+      new_workspace: New Workspace
     create: Collection was successfully created.
     update: Collection was successfully updated.
     destroy: Collection was successfully destroyed.
