@@ -157,7 +157,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
-    mirador_rails (0.4.0)
+    mirador_rails (0.4.1)
       font-awesome-rails
       jquery-rails
       material_icons
