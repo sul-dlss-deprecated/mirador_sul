@@ -46,5 +46,9 @@ RSpec.describe Collection, type: :model do
       user_buttons = subject.mirador_options[:mainMenuSettings][:userButtons]
       expect(user_buttons[0][:label]).to eq 'Save'
     end
+
+    it 'forces the load window to open' do
+      expect(subject.mirador_options[:openManifestsPage]).to be true
+    end
   end
 end
