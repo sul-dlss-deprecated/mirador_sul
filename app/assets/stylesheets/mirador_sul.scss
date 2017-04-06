@@ -1,5 +1,7 @@
 @import 'bootstrap_import';
 @import 'sul-styles';
+@import 'variables';
+@import 'base';
 @import 'header';
 @import 'home';
 @import 'collection';
@@ -15,11 +17,5 @@ html .mirador-viewer {
   *::before,
   *::after {
     box-sizing: content-box; // 1
-  }
-}
-
-.row {
-  &.odd {
-    background-color: $table-bg-accent;
   }
 }

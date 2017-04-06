@@ -1,0 +1,9 @@
+.row-striped {
+  &.odd {
+    background-color: $table-bg-accent;
+  }
+}
+
+.content-area {
+  max-width: $desktop-max-width;
+}
