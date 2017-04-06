@@ -8,7 +8,7 @@ ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 set :deploy_to, "/opt/app/mirador/#{fetch(:application)}"
 
 set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle config/certs config/settings)
-set :linked_files, %w(config/database.yml config/secrets.yml config/honeybadger.yml)
+set :linked_files, %w(config/database.yml config/honeybadger.yml)
 
 set :bundle_without, %w(deployment development test).join(' ')
 
