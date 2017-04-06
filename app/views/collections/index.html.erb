@@ -16,7 +16,7 @@
         <td><%= link_to 'Show', collection %></td>
         <td><%= link_to 'Edit', edit_collection_path(collection) %></td>
         <td><%= link_to 'Destroy', collection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to t('workspaces.new.heading'), new_collection_workspace_path(collection) %></td>
+        <td><%= link_to t('collections.index.new_workspace'), new_collection_workspace_path(collection) %></td>
       </tr>
     <% end %>
   </tbody>
