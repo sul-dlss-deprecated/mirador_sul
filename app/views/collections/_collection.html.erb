@@ -1,10 +1,10 @@
 <div class="row <%= cycle('odd', 'even') %> collection-result">
-  <div class="col-md-12">
+  <div class="col-12">
     <div class="row">
-      <div class="col-lg-10">
+      <div class="col-10">
         <h2><%= link_to(collection.name, collection) %></h2>
       </div>
-      <div class="col-lg-2">
+      <div class="col-2">
         <div class="btn-group pull-right" role="group">
           <%= link_to edit_collection_path(collection), class: 'btn btn-default', title: t(:'.edit') do %>
             <i class="material-icons">mode_edit</i> <span class='sr-only'><%= t(:'.edit') %></span>
@@ -19,7 +19,7 @@
       </div>
     </div>
   </div>
-  <div class="col-md-12">
+  <div class="col-12">
     <p>
       <%= l(collection.created_at, format: :short) %> &middot;
       <%= t(:'.workspaces_count', pluralization: pluralize(collection.workspaces_count, 'workspace')) %>
