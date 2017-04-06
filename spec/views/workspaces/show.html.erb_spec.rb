@@ -12,8 +12,4 @@ RSpec.describe 'workspaces/show', type: :view do
   it 'renders a mirador script tag' do
     expect(rendered).to have_css('script', text: /Mirador/, visible: false)
   end
-
-  it 'renders a back link' do
-    expect(rendered).to have_link 'Back'
-  end
 end

@@ -12,7 +12,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="<%= body_classes %>">
     <%= render 'shared/header' %>
     <div class='container-fluid'>
       <%= yield %>
