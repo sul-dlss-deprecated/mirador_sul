@@ -12,6 +12,7 @@ class CollectionsController < ApplicationController
 
   # GET /collections/1
   def show
+    @is_edit = false
   end
 
   # GET /collections/new
@@ -21,6 +22,7 @@ class CollectionsController < ApplicationController
 
   # GET /collections/1/edit
   def edit
+    @is_edit = true
   end
 
   # POST /collections
