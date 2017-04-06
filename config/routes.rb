@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   end
 
   resources :workspaces, only: [:index, :show, :destroy, :update]
+
+  mount MiradorRails::Engine, at: MiradorRails::Engine.locales_mount_path
 end
