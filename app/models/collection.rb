@@ -9,9 +9,19 @@ class Collection < ApplicationRecord
 
   def mirador_options
     {
-      height: MiradorSul::Application.config.mirador_workspace_height,
-      options: {
-        data: manifest_urls.map { |manifest_url| { manifestUri: manifest_url } }
+      id: 'viewer',
+      buildPath: '/assets/',
+      imagePath: '',
+      i18nPath: '',
+      data: manifest_urls.map { |manifest_url| { manifestUri: manifest_url } },
+      mainMenuSettings: {
+        userButtons: [
+          {
+            label: 'Save',
+            iconClass: 'fa fa-lg fa-fw fa-floppy-o',
+            attributes: { class: 'save' }
+          }
+        ]
       }
     }
   end

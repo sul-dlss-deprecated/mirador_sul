@@ -11,7 +11,9 @@ class Workspace < ApplicationRecord
     super
   end
 
+  # Proxying data through mirador_options
+  # for consistency with Collection
   def mirador_options
-    JSON.parse(data).deep_symbolize_keys
+    data
   end
 end

@@ -57,6 +57,63 @@ RSpec.describe WorkspacesController, type: :controller do
     end
   end
 
+  describe 'PUT #update' do
+    let(:workspace) { Workspace.create! valid_params }
+    context 'with valid params' do
+      it 'updates the requested workspace' do
+        put :update, params: { id: workspace.id, workspace: valid_params.merge(name: 'New Workspace Name') }
+
+        workspace.reload
+        expect(workspace.name).to eq 'New Workspace Name'
+      end
+
+      context 'json request' do
+        it 'renders the workspace as json' do
+          put :update, params: { id: workspace.id, workspace: valid_params, format: :json }
+
+          response_hash = JSON.parse(response.body)
+          expect(response_hash['id']).to eq workspace.id
+          expect(response_hash['name']).to eq workspace.name
+        end
+      end
+
+      context 'html request' do
+        it 'redirects to the workspace with a flash notice' do
+          put :update, params: { id: workspace.id, workspace: valid_params }
+
+          expect(response).to redirect_to workspace
+          expect(flash[:notice]).to eq 'Workspace successfully updated.'
+        end
+      end
+    end
+
+    context 'with invalid params' do
+      it 'is not successfull' do
+        put :update, params: { id: workspace.id, workspace: invalid_params }
+
+        expect(response).not_to be_success
+      end
+
+      context 'json request' do
+        it 'renders a json status' do
+          put :update, params: { id: workspace.id, workspace: invalid_params, format: :json }
+
+          response_hash = JSON.parse(response.body)
+          expect(response_hash['status']).to eq 'error'
+        end
+      end
+
+      context 'html request' do
+        it 'redirects to the workspace with a flash alert' do
+          put :update, params: { id: workspace.id, workspace: invalid_params }
+
+          expect(response).to redirect_to workspace
+          expect(flash[:alert]).to eq 'There was a problem updating the workspace.'
+        end
+      end
+    end
+  end
+
   describe 'DELETE #destroy' do
     it 'destroys the requested workspace' do
       workspace = Workspace.create! valid_params
