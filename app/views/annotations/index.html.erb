@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t(:'.header', name: @workspace.name) %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @workspace.annotations %>
+  </tbody>
+</table>
+
+<%= link_to 'New Annotation', new_workspace_annotation_path %>

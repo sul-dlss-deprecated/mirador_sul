@@ -51,3 +51,8 @@ en:
       heading: New Workspace
     show:
       heading: "Workspace: %{name}"
+  annotations:
+    create: Annotation was successfully created.
+    create_error: There was a problem creating the annotation.
+    index:
+      header: "Annotations for Workspace %{name}"
