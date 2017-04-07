@@ -49,16 +49,5 @@ RSpec.feature 'Workspace Management', type: :feature do
       expect(workspace.description).to eq 'Updated Workspace Description'
     end
 
-    scenario 'I can destroy a workspace' do
-      url = 'http://manifest-host/iiif/manifest.json'
-      create(:workspace, collection: collection, data: {
-        options: { data: [url] }
-      }.to_json, user: user)
-      visit '/workspaces'
-
-      click_link 'Destroy'
-
-      expect(page).to_not have_css 'a', text: 'Destroy'
-    end
   end
 end
