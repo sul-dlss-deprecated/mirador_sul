@@ -1,4 +1,6 @@
 <li>
   <%= manifest.url %>
-  <%= link_to 'Destroy', [@collection, manifest], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% if in_edit_mode %>
+    <%= link_to 'Destroy', [@collection, manifest], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
 </li>

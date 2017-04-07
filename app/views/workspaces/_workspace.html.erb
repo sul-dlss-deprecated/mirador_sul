@@ -1,6 +1,7 @@
-<tr>
-  <td><%= workspace.name %></td>
-  <td><%= link_to 'Show', workspace %></td>
-  <td><%= link_to 'Edit', edit_workspace_path(workspace) %></td>
-  <td><%= link_to 'Destroy', workspace, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-</tr>
+<li>
+  <%= workspace.name %>
+  <% if in_edit_mode %>
+    <%= link_to 'Show', workspace %>
+    <%= link_to 'Destroy', workspace, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</li>

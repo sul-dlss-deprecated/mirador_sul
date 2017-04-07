@@ -5,7 +5,11 @@
 
       <h3><%= @collection.name %></h3>
 
+      <h4><%= t('collections.show.manifests') %></h4>
       <ol><%= render @collection.manifests %></ol>
+
+      <h4><%= t('collections.show.workspaces') %></h4>
+      <ol><%= render @collection.workspaces %></ol>
 
       <%= link_to 'Edit', edit_collection_path(@collection) %> |
       <%= link_to 'Back', collections_path %> |
