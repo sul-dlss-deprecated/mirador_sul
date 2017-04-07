@@ -5,6 +5,7 @@ RSpec.describe CollectionsController, type: :controller do
   let(:valid_attributes) do
     {
       name: 'Super amazing collection! 😎',
+      description: "It's really all in the name. 🐙",
       user: user
     }
   end
@@ -60,6 +61,13 @@ RSpec.describe CollectionsController, type: :controller do
         expect(assigns(:collection)).to be_persisted
       end
 
+      it 'persists the correct data' do
+        post :create, params: { collection: valid_attributes }
+        collection = assigns(:collection)
+        expect(collection.name).to eq valid_attributes[:name]
+        expect(collection.description).to eq valid_attributes[:description]
+      end
+
       it 'redirects to the created collection' do
         post :create, params: {collection: valid_attributes}
         expect(response).to redirect_to(Collection.last)
@@ -89,6 +97,18 @@ RSpec.describe CollectionsController, type: :controller do
         collection = Collection.create! valid_attributes
         put :update, params: {id: collection.to_param, collection: valid_attributes}
         expect(assigns(:collection)).to eq(collection)
+      end
+
+      it 'allows the correct data to be updated' do
+        collection = Collection.create! valid_attributes
+        put :update, params: {
+          id: collection.to_param,
+          collection: valid_attributes.merge(name: 'Updated Name', description: 'Updated Description')
+        }
+
+        collection = assigns(:collection)
+        expect(collection.name).to eq 'Updated Name'
+        expect(collection.description).to eq 'Updated Description'
       end
 
       it 'redirects to the collection' do
