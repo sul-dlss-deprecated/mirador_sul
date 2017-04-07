@@ -11,7 +11,7 @@ RSpec.describe 'collections/index', type: :view do
     expect(rendered).to have_css 'a', text: /New Workspace/, count: 2
   end
 
-  it 'renders a links to create workspaces from each collection' do
+  it 'renders links to create workspaces from each collection' do
     render
     expect(rendered).to have_css 'a', text: /New Workspace/, count: 2
   end
