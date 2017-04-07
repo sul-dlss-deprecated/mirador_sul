@@ -57,9 +57,9 @@ RSpec.describe ManifestsController, type: :controller do
         expect(assigns(:manifest)).to be_persisted
       end
 
-      it 'redirects to the created manifest' do
+      it 'redirects to the collection edit page' do
         post :create, params: { collection_id: collection, manifest: valid_attributes }
-        expect(response).to redirect_to(collection)
+        expect(response).to redirect_to(edit_collection_path(collection))
       end
     end
 
