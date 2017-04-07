@@ -27,6 +27,14 @@ RSpec.describe WorkspacesController, type: :controller do
     end
   end
 
+  describe 'GET #edit' do
+    it 'assigns the requested workspace as @workspace' do
+      workspace = Workspace.create! valid_params
+      get :edit, params: { id: workspace.to_param }
+      expect(assigns(:workspace)).to eq(workspace)
+    end
+  end
+
   describe 'POST #create' do
     context 'with valid params' do
       it 'assigns the collection as @collection' do
@@ -61,10 +69,14 @@ RSpec.describe WorkspacesController, type: :controller do
     let(:workspace) { Workspace.create! valid_params }
     context 'with valid params' do
       it 'updates the requested workspace' do
-        put :update, params: { id: workspace.id, workspace: valid_params.merge(name: 'New Workspace Name') }
+        put :update, params: {
+          id: workspace.id,
+          workspace: valid_params.merge(name: 'New Workspace Name', description: 'New Workspace Description')
+        }
 
         workspace.reload
         expect(workspace.name).to eq 'New Workspace Name'
+        expect(workspace.description).to eq 'New Workspace Description'
       end
 
       context 'json request' do

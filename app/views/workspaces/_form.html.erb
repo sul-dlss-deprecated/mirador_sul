@@ -1,6 +1,17 @@
-<%= form_for([@collection, @workspace], html: { class: 'form-inline' }) do |f| %>
-  <%= f.label :name, class: 'mr-sm-2' %>
-  <%= f.text_field :name, class: 'form-control'  %>
+<%= form_for([@collection, @workspace]) do |f| %>
+  <div class="form-group row">
+    <%= f.label :name, class: 'col-2 col-form-label' %>
+    <div class='col-10'>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <%= f.label :description, class: 'col-2 col-form-label' %>
+    <div class='col-10'>
+      <%= f.text_area :description, class: 'form-control' %>
+    </div>
+  </div>
 
   <%= f.hidden_field :data %>
   <div class="actions">

@@ -47,6 +47,25 @@ RSpec.describe 'Workspaces', type: :request do
     end
   end
 
+  describe 'GET /workspaces/:id/edit' do
+    context 'an authorized user' do
+      let(:workspace) { create(:workspace, user: user) }
+      it 'is allowed' do
+        get edit_workspace_path(workspace)
+        expect(response).to have_http_status(200)
+      end
+    end
+
+    context 'an authorized user' do
+      let(:workspace) { create(:workspace) }
+      it 'is not allowed' do
+        expect do
+          get edit_workspace_path(workspace)
+        end.to raise_error(CanCan::AccessDenied)
+      end
+    end
+  end
+
   describe 'POST /collections/:collection_id/manifests' do
     context 'an authorized user' do
       let(:collection) { create(:collection, user: user) }
