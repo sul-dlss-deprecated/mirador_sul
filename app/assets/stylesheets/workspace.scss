@@ -1,6 +1,14 @@
+.workspaces-show {
+  .container-fluid {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 #viewer {
+  clear: both;
   display: block;
-  height: 600px;
-  position: relative;
+  height: calc(100% - 55px); // should be $navbar-brand-height but the variable is not available
+  position: fixed;
   width: 100%;
 }

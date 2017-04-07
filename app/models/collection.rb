@@ -14,6 +14,7 @@ class Collection < ApplicationRecord
       imagePath: '',
       i18nPath: '',
       data: manifest_urls.map { |manifest_url| { manifestUri: manifest_url } },
+      openManifestsPage: true,
       mainMenuSettings: {
         userButtons: [
           {
