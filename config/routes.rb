@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :workspaces, only: [:new, :create]
   end
 
-  resources :workspaces, only: [:index, :show, :destroy, :update]
+  resources :workspaces, only: [:index, :show, :destroy, :edit, :update]
 
   mount MiradorRails::Engine, at: MiradorRails::Engine.locales_mount_path
 end

@@ -1,8 +1,8 @@
 class WorkspacesController < ApplicationController
-  load_and_authorize_resource :collection, except: [:index, :show, :destroy, :update]
-  load_and_authorize_resource :workspace, through: :collection, except: [:index, :show, :destroy, :update]
+  load_and_authorize_resource :collection, except: [:index, :show, :destroy, :edit, :update]
+  load_and_authorize_resource :workspace, through: :collection, except: [:index, :show, :destroy, :edit, :update]
 
-  load_and_authorize_resource :workspace, only: [:index, :show, :destroy, :update]
+  load_and_authorize_resource :workspace, only: [:index, :show, :destroy, :edit, :update]
 
   # GET /workspaces
   def index; end
@@ -12,6 +12,9 @@ class WorkspacesController < ApplicationController
 
   # GET /workspaces/:id
   def show; end
+
+  # GET /workspaces/:id/edit
+  def edit; end
 
   # POST /collections/:collection_id/workspaces
   def create

@@ -27,6 +27,14 @@ RSpec.describe WorkspacesController, type: :controller do
     end
   end
 
+  describe 'GET #edit' do
+    it 'assigns the requested workspace as @workspace' do
+      workspace = Workspace.create! valid_params
+      get :edit, params: { id: workspace.to_param }
+      expect(assigns(:workspace)).to eq(workspace)
+    end
+  end
+
   describe 'POST #create' do
     context 'with valid params' do
       it 'assigns the collection as @collection' do

@@ -34,6 +34,19 @@ RSpec.feature 'Workspace Management', type: :feature do
       expect(page).to have_css('script', visible: false, text: /#{url}/)
     end
 
+    scenario 'I can edit/update an existing workspace' do
+      workspace = create(:workspace, user: user)
+
+      visit "/workspaces/#{workspace.id}/edit"
+
+      fill_in 'Name', with: 'Updated Workspace Name'
+
+      click_button 'Update Workspace'
+
+      workspace.reload
+      expect(workspace.name).to eq 'Updated Workspace Name'
+    end
+
     scenario 'I can destroy a workspace' do
       url = 'http://manifest-host/iiif/manifest.json'
       create(:workspace, collection: collection, data: {
