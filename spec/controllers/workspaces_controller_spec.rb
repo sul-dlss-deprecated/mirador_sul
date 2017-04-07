@@ -69,10 +69,14 @@ RSpec.describe WorkspacesController, type: :controller do
     let(:workspace) { Workspace.create! valid_params }
     context 'with valid params' do
       it 'updates the requested workspace' do
-        put :update, params: { id: workspace.id, workspace: valid_params.merge(name: 'New Workspace Name') }
+        put :update, params: {
+          id: workspace.id,
+          workspace: valid_params.merge(name: 'New Workspace Name', description: 'New Workspace Description')
+        }
 
         workspace.reload
         expect(workspace.name).to eq 'New Workspace Name'
+        expect(workspace.description).to eq 'New Workspace Description'
       end
 
       context 'json request' do

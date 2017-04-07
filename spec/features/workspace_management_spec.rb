@@ -40,11 +40,13 @@ RSpec.feature 'Workspace Management', type: :feature do
       visit "/workspaces/#{workspace.id}/edit"
 
       fill_in 'Name', with: 'Updated Workspace Name'
+      fill_in 'Description', with: 'Updated Workspace Description'
 
       click_button 'Update Workspace'
 
       workspace.reload
       expect(workspace.name).to eq 'Updated Workspace Name'
+      expect(workspace.description).to eq 'Updated Workspace Description'
     end
 
     scenario 'I can destroy a workspace' do
