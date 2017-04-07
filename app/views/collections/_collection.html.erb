@@ -1,0 +1,28 @@
+<div class="row row-striped <%= cycle('odd', 'even') %> collection-result">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-10">
+        <h2><%= link_to(collection.name, collection) %></h2>
+      </div>
+      <div class="col-2">
+        <div class="btn-group pull-right" role="group">
+          <%= link_to edit_collection_path(collection), class: 'btn btn-default', title: t(:'.edit') do %>
+            <i class="material-icons">mode_edit</i> <span class='sr-only'><%= t(:'.edit') %></span>
+          <% end %>
+          <%= link_to new_collection_workspace_path(collection), class: 'btn btn-default', title: t(:'.create_workspace') do %>
+            <i class="material-icons">add</i> <span class='sr-only'><%= t(:'.create_workspace') %></span>
+          <% end %>
+          <%= link_to collection, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default', title: t(:'.destroy') do %>
+            <i class="material-icons">delete</i> <span class='sr-only'><%= t(:'.destroy') %></span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <p>
+      <%= l(collection.created_at, format: :short) %> &middot;
+      <%= t(:'.workspaces_count', pluralization: pluralize(collection.workspaces_count, 'workspace')) %>
+    </p>
+  </div>
+</div>

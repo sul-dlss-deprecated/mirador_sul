@@ -1,7 +1,10 @@
 @import 'bootstrap_import';
 @import 'sul-styles';
+@import 'variables';
+@import 'base';
 @import 'header';
 @import 'home';
+@import 'collection';
 @import 'workspace';
 
 // Mirador does not like the Bootstrap reboot box-sizing from reboot.scss

@@ -1,7 +1,7 @@
 class Workspace < ApplicationRecord
   validates :name, presence: true
 
-  belongs_to :collection
+  belongs_to :collection, counter_cache: true
   belongs_to :user
 
   serialize :data, JSON
