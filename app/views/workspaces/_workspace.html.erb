@@ -1,7 +1,18 @@
-<li>
-  <%= workspace.name %>
-  <% if in_edit_mode %>
-    <%= link_to 'Show', workspace %>
-    <%= link_to 'Destroy', workspace, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
-</li>
+<div class="col-4">
+  <div class="grid-item">
+    <h3><%= link_to workspace.name, workspace %></h3>
+    <% if workspace.description %>
+      <p title="<%= workspace.description %>"><%= truncate(workspace.description, length: 175) %></p>
+    <% end %>
+    <% if can? :manage, workspace %>
+      <div class="btn-group pull-right" role="group">
+        <%= link_to edit_workspace_path(workspace), class: 'btn btn-default', title: t(:'.edit') do %>
+          <i class="material-icons">mode_edit</i> <span class='sr-only'><%= t(:'.edit') %></span>
+        <% end %>
+        <%= link_to workspace, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default', title: t(:'.destroy') do %>
+          <i class="material-icons">delete</i> <span class='sr-only'><%= t(:'.destroy') %></span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

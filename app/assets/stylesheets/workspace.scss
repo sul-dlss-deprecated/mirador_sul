@@ -12,3 +12,52 @@
   position: fixed;
   width: 100%;
 }
+
+.grid-item {
+  position:relative;
+  height: $font-size-lg * $line-height-lg * 10;
+  margin-bottom: $grid-gutter-width-base;
+  padding: $grid-gutter-width-base * 0.5;
+  box-shadow: 3px 3px 10px black;
+  color: $dark-accent-text;
+  transition: all 0.2s ease-out;
+  &:hover {
+    // cursor: pointer;
+    transform: scale(1.04);
+    transition: all 0.2s ease-out;
+  }
+  .btn-group {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: $grid-gutter-width-base * 0.5;
+    opacity: 0;
+    transition: all 0.2s ease-out;
+  }
+  &:hover .btn-group {
+    opacity: 1;
+    transition: all 0.2s ease-out;
+  }
+  h3 a {
+    color: $dark-accent-text;
+  }
+  &>p {
+    display: block;
+    overflow:hidden;
+    max-height: $font-size-base * $line-height-base * 6;
+  }
+}
+
+.grid-item::before {
+  content: "";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: -2;
+  display: block;
+  background: url(http://projectmirador.org/img/banner.jpg) no-repeat center center;
+  opacity: 1;
+  background-size: cover;
+}

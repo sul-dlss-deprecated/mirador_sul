@@ -9,7 +9,7 @@
       <ol><%= render @collection.manifests %></ol>
 
       <h4><%= t('collections.show.workspaces') %></h4>
-      <ol><%= render @collection.workspaces %></ol>
+      <div class="row"><%= render @collection.workspaces %></div>
 
       <%= link_to 'Edit', edit_collection_path(@collection) %> |
       <%= link_to 'Back', collections_path %> |
