@@ -9,14 +9,20 @@ class MiradorOptionsJson
     @workspace = workspace
   end
 
-  delegate :collection, :new_record?, to: :workspace
+  delegate :collection, :data, :name, :new_record?, to: :workspace
 
   def to_json
-    return new_workspace_options.to_json if collection && new_record?
-    workspace.mirador_options
+    return new_workspace_options.to_json if data.blank?
+    merge_user_logo(JSON.parse(workspace.data)).to_json
   end
 
   private
+
+  def merge_user_logo(hash)
+    hash['mainMenuSettings'] ||= {}
+    hash['mainMenuSettings']['userLogo'] = { 'label' => name }
+    hash
+  end
 
   def new_workspace_options
     {
