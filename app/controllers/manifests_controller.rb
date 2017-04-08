@@ -10,7 +10,7 @@ class ManifestsController < ApplicationController
     @manifest.user = current_user
 
     if @manifest.save
-      redirect_to @collection, notice: t('manifests.create')
+      redirect_to edit_collection_path(@collection), notice: t('manifests.create')
     else
       redirect_to @collection, alert: t('manifests.create_error')
     end
