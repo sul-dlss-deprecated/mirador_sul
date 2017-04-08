@@ -26,22 +26,29 @@ RSpec.describe 'Workspaces', type: :request do
   end
 
   describe 'GET /workspaces/:id' do
-    let(:workspace) { create(:workspace, collection: collection, data: { height: '100px' }.to_json) }
     context 'an authorized user' do
-      let(:collection) { create(:collection, user: user) }
+      let(:workspace) { create(:workspace, user: user) }
+      it 'is allowed' do
+        get workspace_path(workspace)
+        expect(response).to have_http_status(200)
+      end
+    end
+
+    context 'a public workspace' do
+      let(:workspace) { create(:workspace, public: true) }
 
       it 'is allowed' do
-        get workspaces_path(collection, workspace)
+        get workspace_path(workspace)
         expect(response).to have_http_status(200)
       end
     end
 
     context 'an authorized user' do
-      let(:collection) { create(:collection) }
+      let(:workspace) { create(:workspace) }
 
       it 'is not allowed' do
         expect do
-          get new_collection_workspace_path(collection)
+          get workspace_path(workspace)
         end.to raise_error(CanCan::AccessDenied)
       end
     end

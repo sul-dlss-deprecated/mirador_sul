@@ -13,6 +13,13 @@
     </div>
   </div>
 
+  <div class="form-group row">
+    <%= f.label :public, class: 'col-2 col-form-label' %>
+    <div class='col-10'>
+      <%= f.check_box :public %>
+    </div>
+  </div>
+
   <%= f.hidden_field :data %>
   <div class="actions">
     <%= f.submit class: 'btn btn-primary' %>

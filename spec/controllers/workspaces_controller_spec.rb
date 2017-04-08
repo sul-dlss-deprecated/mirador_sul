@@ -19,6 +19,26 @@ RSpec.describe WorkspacesController, type: :controller do
     end
   end
 
+  describe 'GET #index' do
+    context 'a user with collections' do
+      it 'lists all their collections' do
+        2.times { create(:workspace, user: user) }
+
+        get :index
+        expect(assigns(:workspaces).length).to eq 2
+      end
+    end
+
+    context 'a user without collections' do
+      it 'does not list public collections' do
+        2.times { create(:workspace, public: true) }
+
+        get :index
+        expect(assigns(:workspaces).length).to eq 0
+      end
+    end
+  end
+
   describe 'GET #show' do
     it 'assigns the requested workspace as @workspace' do
       workspace = Workspace.create! valid_params
@@ -71,12 +91,17 @@ RSpec.describe WorkspacesController, type: :controller do
       it 'updates the requested workspace' do
         put :update, params: {
           id: workspace.id,
-          workspace: valid_params.merge(name: 'New Workspace Name', description: 'New Workspace Description')
+          workspace: valid_params.merge(
+            name: 'New Workspace Name',
+            description: 'New Workspace Description',
+            public: 'true'
+          )
         }
 
         workspace.reload
         expect(workspace.name).to eq 'New Workspace Name'
         expect(workspace.description).to eq 'New Workspace Description'
+        expect(workspace).to be_public
       end
 
       context 'json request' do

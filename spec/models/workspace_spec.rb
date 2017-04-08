@@ -28,6 +28,14 @@ RSpec.describe Workspace, type: :model do
     end
   end
 
+  describe 'public/private' do
+    it 'has a public? boolean attribute' do
+      expect(subject).not_to be_public
+      subject.public = true
+      expect(subject).to be_public
+    end
+  end
+
   describe '#mirador_options' do
     it 'includes original configuration keys' do
       subject.data = { a: :b }.to_json

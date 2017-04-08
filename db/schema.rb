@@ -73,11 +73,13 @@ ActiveRecord::Schema.define(version: 20170410164012) do
     t.string   "name"
     t.binary   "data",          limit: 64000
     t.integer  "collection_id"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
     t.integer  "user_id"
     t.text     "description"
+    t.boolean  "public",                      default: false, null: false
     t.index ["collection_id"], name: "index_workspaces_on_collection_id"
+    t.index ["public"], name: "index_workspaces_on_public"
     t.index ["user_id"], name: "index_workspaces_on_user_id"
   end
 

@@ -13,6 +13,7 @@ RSpec.describe 'workspaces/edit', type: :view do
   it 'renders the edit workspace form' do
     render
     expect(rendered).to have_css 'input[name="workspace[name]"]'
+    expect(rendered).to have_css 'input[name="workspace[public]"][type="checkbox"]'
     expect(rendered).to have_css 'input[type="submit"]'
   end
 end
