@@ -7,7 +7,7 @@ class Workspace < ApplicationRecord
   serialize :data, JSON
 
   def data
-    return collection.mirador_options.to_json if collection && new_record?
+    return {}.to_json if super.blank?
     super
   end
 

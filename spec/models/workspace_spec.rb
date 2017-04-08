@@ -13,18 +13,9 @@ RSpec.describe Workspace, type: :model do
   end
 
   describe '#data' do
-    context 'when the workspace is not persisted' do
-      it "returns the collection's mirador_options as json" do
-        data = Workspace.new(collection: collection).data
-        expect(data).to be_a String
-        expect(JSON.parse(data)).to have_key('id')
-        expect(JSON.parse(data)).to have_key('data')
-      end
-
-      it 'returns the correct data when persisted' do
-        expect(subject.data).to be_a String
-        expect(JSON.parse(subject.data)).to have_key('some_json_data')
-      end
+    it "returns the collection's mirador_options as json" do
+      subject.data = nil
+      subject.data = {}.to_json
     end
   end
 
