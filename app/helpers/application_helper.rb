@@ -4,6 +4,6 @@ module ApplicationHelper
   end
 
   def mirador_options(workspace: @workspace)
-    MiradorOptionsJson.new(workspace: workspace).to_json
+    MiradorOptionsJson.new(context: controller, workspace: workspace).to_json
   end
 end

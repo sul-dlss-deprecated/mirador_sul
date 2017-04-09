@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe MiradorOptionsJson do
+RSpec.describe MiradorOptionsJson, type: :service do
   subject(:mirador_options) { described_class.new(workspace: workspace) }
   let(:workspace) { create(:workspace) }
 
@@ -32,6 +32,31 @@ RSpec.describe MiradorOptionsJson do
       expect(json['mainMenuSettings']).to have_key 'userLogo'
       expect(json['mainMenuSettings']['userLogo']).to have_key 'label'
       expect(json['mainMenuSettings']['userLogo']['label']).to eq('workspace_title')
+    end
+  end
+
+  describe 'configuring the Save userButton' do
+    context 'when a user can update the workspace' do
+      it 'the save button remains in the config' do
+        expect(mirador_options).to receive_messages(user_can_update_workspace?: true)
+        json = JSON.parse(mirador_options.to_json)
+        expect(json['mainMenuSettings']['userButtons'].length).to eq 1
+        expect(json['mainMenuSettings']['userButtons'].first['label']).to eq 'Save'
+      end
+    end
+
+    context 'when a user cannot update the workspace' do
+      before do
+        workspace.data = {
+          'mainMenuSettings' => {
+            'userButtons' => [{ 'label' => 'Save' }]
+          }
+        }.to_json
+      end
+      it 'the save button is removed from the config' do
+        json = JSON.parse(mirador_options.to_json)
+        expect(json['mainMenuSettings']['userButtons']).to be_blank
+      end
     end
   end
 end

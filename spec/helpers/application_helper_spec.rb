@@ -14,6 +14,7 @@ RSpec.describe ApplicationHelper, type: :helper do
 
   describe '#mirador_options' do
     it 'returns Mirador Options as JSON' do
+      expect(helper).to receive_messages(controller: nil)
       options = helper.mirador_options(workspace: create(:workspace))
       expect(JSON.parse(options)).to have_key 'mainMenuSettings'
     end
