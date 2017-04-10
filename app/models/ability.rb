@@ -1,3 +1,4 @@
+# Access control
 class Ability
   include CanCan::Ability
 
