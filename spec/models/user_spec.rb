@@ -17,7 +17,7 @@ RSpec.describe User, type: :model do
     end
 
     context 'with many manifests' do
-      before(:each) do
+      before do
         subject.collections << create(:collection)
         (1..n).each do |_i|
           subject.collections.first.manifests << create(:manifest)

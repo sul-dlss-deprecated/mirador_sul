@@ -27,7 +27,7 @@ RSpec.describe 'collections/_collection', type: :view do
     collection.description = nil
     render
     expect(rendered).to have_css('h2 a')
-    expect(rendered).to_not have_css('p')
+    expect(rendered).not_to have_css('p')
   end
 
   it 'renders the number of workspaces assocated with the collection' do

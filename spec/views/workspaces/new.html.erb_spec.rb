@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'workspaces/new', type: :view do
   let(:manifest) { create(:manifest) }
-  before(:each) do
+  before do
     assign(:collection, create(:collection, manifests: [manifest]))
     assign(:workspace, Workspace.new)
   end
