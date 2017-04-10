@@ -8,9 +8,7 @@ notifications:
 rvm:
   - 2.4.0
 
-env:
-  - "RAILS_ENV=test"
-
+cache: bundler
 bundler_args: --without production deployment
 
 before_script:
