@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'collections/new', type: :view do
-  before(:each) do
+  before do
     assign(:collection, build(:collection))
   end
 

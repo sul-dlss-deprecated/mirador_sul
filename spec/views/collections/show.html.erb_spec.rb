@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'collections/show', type: :view do
-  before(:each) do
+  before do
     @collection = assign(:collection, create(:collection))
   end
 

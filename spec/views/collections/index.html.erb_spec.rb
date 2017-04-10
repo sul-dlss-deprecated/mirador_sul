@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'collections/index', type: :view do
-  before(:each) do
+  before do
     assign(:collections, create_list(:collection, 2))
   end
 
