@@ -14,24 +14,23 @@
 }
 
 .grid-item {
-  position:relative;
+  box-shadow: 3px 3px 10px black;
+  color: $dark-accent-text;
   height: $font-size-lg * $line-height-lg * 10;
   margin-bottom: $grid-gutter-width-base;
   padding: $grid-gutter-width-base * 0.5;
-  box-shadow: 3px 3px 10px black;
-  color: $dark-accent-text;
+  position:relative;
   transition: all 0.2s ease-out;
   &:hover {
-    // cursor: pointer;
     transform: scale(1.04);
     transition: all 0.2s ease-out;
   }
   .btn-group {
-    position: absolute;
     bottom: 0;
-    right: 0;
     margin: $grid-gutter-width-base * 0.5;
     opacity: 0;
+    position: absolute;
+    right: 0;
     transition: all 0.2s ease-out;
   }
   &:hover .btn-group {
@@ -43,21 +42,21 @@
   }
   &>p {
     display: block;
-    overflow:hidden;
     max-height: $font-size-base * $line-height-base * 6;
+    overflow:hidden;
   }
 }
 
 .grid-item::before {
-  content: "";
-  position:absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -2;
-  display: block;
-  background: image-url("workspace-placeholder.jpg") no-repeat center center;
-  opacity: 1;
   background-size: cover;
+  background: image-url("workspace-placeholder.jpg") no-repeat center center;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -2;
 }
