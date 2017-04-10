@@ -7,3 +7,4 @@ AllCops:
     - 'db/**/*'
     - 'Gemfile'
     - 'Capfile'
+    - 'vendor/bundle/**/*'
