@@ -1,3 +1,4 @@
+# CRUD for Mirador workspaces
 class WorkspacesController < ApplicationController
   load_and_authorize_resource :collection, except: [:index, :show, :destroy, :edit, :update]
   load_and_authorize_resource :workspace, through: :collection, except: [:index, :show, :destroy, :edit, :update]

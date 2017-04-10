@@ -1,3 +1,4 @@
+# CRUD for IIIF manifests
 class ManifestsController < ApplicationController
   before_action :set_manifest, only: :destroy
   load_and_authorize_resource :collection
