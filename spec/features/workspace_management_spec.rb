@@ -48,6 +48,5 @@ RSpec.feature 'Workspace Management', type: :feature do
       expect(workspace.name).to eq 'Updated Workspace Name'
       expect(workspace.description).to eq 'Updated Workspace Description'
     end
-
   end
 end

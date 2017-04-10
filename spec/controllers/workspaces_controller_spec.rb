@@ -129,14 +129,14 @@ RSpec.describe WorkspacesController, type: :controller do
   describe 'DELETE #destroy' do
     it 'destroys the requested workspace' do
       workspace = Workspace.create! valid_params
-      expect {
-        delete :destroy, params: {id: workspace.to_param}
-      }.to change(Workspace, :count).by(-1)
+      expect do
+        delete :destroy, params: { id: workspace.to_param }
+      end.to change(Workspace, :count).by(-1)
     end
 
     it 'redirects to the workspaces list' do
       workspace = Workspace.create! valid_params
-      delete :destroy, params: {id: workspace.to_param}
+      delete :destroy, params: { id: workspace.to_param }
       expect(response).to redirect_to(workspaces_url)
     end
   end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'User creation/login', :type => :feature do
+RSpec.feature 'User creation/login', type: :feature do
   scenario 'A new user can create an account' do
     visit new_user_registration_path
 
