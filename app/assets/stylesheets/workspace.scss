@@ -51,13 +51,13 @@
 .grid-item::before {
   content: "";
   position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: -2;
   display: block;
-  background: url(http://projectmirador.org/img/banner.jpg) no-repeat center center;
+  background: image-url("workspace-placeholder.jpg") no-repeat center center;
   opacity: 1;
   background-size: cover;
 }
