@@ -12,3 +12,51 @@
   position: fixed;
   width: 100%;
 }
+
+.grid-item {
+  box-shadow: 3px 3px 10px black;
+  color: $dark-accent-text;
+  height: $font-size-lg * $line-height-lg * 10;
+  margin-bottom: $grid-gutter-width-base;
+  padding: $grid-gutter-width-base * 0.5;
+  position:relative;
+  transition: all 0.2s ease-out;
+  &:hover {
+    transform: scale(1.04);
+    transition: all 0.2s ease-out;
+  }
+  .btn-group {
+    bottom: 0;
+    margin: $grid-gutter-width-base * 0.5;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    transition: all 0.2s ease-out;
+  }
+  &:hover .btn-group {
+    opacity: 1;
+    transition: all 0.2s ease-out;
+  }
+  h3 a {
+    color: $dark-accent-text;
+  }
+  &>p {
+    display: block;
+    max-height: $font-size-base * $line-height-base * 6;
+    overflow:hidden;
+  }
+}
+
+.grid-item::before {
+  background-size: cover;
+  background: image-url("workspace-placeholder.jpg") no-repeat center center;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -2;
+}

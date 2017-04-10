@@ -10,7 +10,7 @@
 <%= render 'manifests/form', collection: @collection %>
 
 <h4><%= t('collections.show.workspaces') %></h4>
-<ol><%= render @collection.workspaces %></ol>
+<div class="row"><%= render @collection.workspaces %></div>
 
 <%= link_to 'Show', @collection %> |
 <%= link_to 'Back', collections_path %>
