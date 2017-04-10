@@ -23,9 +23,9 @@
     </div>
   </div>
   <div class="col-12">
-    <p class="collection-info">
+    <em class="text-muted">
       <%= l(collection.created_at, format: :short) %> &middot;
       <%= t(:'.workspaces_count', pluralization: pluralize(collection.workspaces_count, 'workspace')) %>
-    </p>
+    </em>
   </div>
 </div>
