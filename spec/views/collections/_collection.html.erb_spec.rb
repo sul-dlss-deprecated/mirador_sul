@@ -23,6 +23,13 @@ RSpec.describe 'collections/_collection', type: :view do
     expect(rendered).to have_css('p', text: collection.description)
   end
 
+  it 'renders a paragraph with no description if none is given' do
+    collection.description = nil
+    render
+    expect(rendered).to have_css('h2 a')
+    expect(rendered).to_not have_css('p')
+  end
+
   it 'renders the number of workspaces assocated with the collection' do
     3.times { create(:workspace, collection: collection) }
     render
