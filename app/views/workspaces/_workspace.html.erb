@@ -1,6 +1,6 @@
 <div class="col-4">
   <div class="grid-item">
-    <h3><%= link_to workspace.name, workspace %></h3>
+    <h3 title="<%= workspace.name %>"><%= link_to workspace.name, workspace %></h3>
     <% if workspace.description %>
       <p title="<%= workspace.description %>"><%= truncate(workspace.description, length: 175) %></p>
     <% end %>
