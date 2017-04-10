@@ -27,7 +27,7 @@ RSpec.describe CollectionsController, type: :controller do
   describe 'GET #show' do
     it 'assigns the requested collection as @collection' do
       collection = Collection.create! valid_attributes
-      get :show, params: {id: collection.to_param}
+      get :show, params: { id: collection.to_param }
       expect(assigns(:collection)).to eq(collection)
     end
   end
@@ -42,7 +42,7 @@ RSpec.describe CollectionsController, type: :controller do
   describe 'GET #edit' do
     it 'assigns the requested collection as @collection' do
       collection = Collection.create! valid_attributes
-      get :edit, params: {id: collection.to_param}
+      get :edit, params: { id: collection.to_param }
       expect(assigns(:collection)).to eq(collection)
     end
   end
@@ -50,13 +50,13 @@ RSpec.describe CollectionsController, type: :controller do
   describe 'POST #create' do
     context 'with valid params' do
       it 'creates a new Collection' do
-        expect {
-          post :create, params: {collection: valid_attributes}
-        }.to change(Collection, :count).by(1)
+        expect do
+          post :create, params: { collection: valid_attributes }
+        end.to change(Collection, :count).by(1)
       end
 
       it 'assigns a newly created collection as @collection' do
-        post :create, params: {collection: valid_attributes}
+        post :create, params: { collection: valid_attributes }
         expect(assigns(:collection)).to be_a(Collection)
         expect(assigns(:collection)).to be_persisted
       end
@@ -69,7 +69,7 @@ RSpec.describe CollectionsController, type: :controller do
       end
 
       it 'redirects to the created collection' do
-        post :create, params: {collection: valid_attributes}
+        post :create, params: { collection: valid_attributes }
         expect(response).to redirect_to(Collection.last)
       end
     end
@@ -88,14 +88,14 @@ RSpec.describe CollectionsController, type: :controller do
 
       it 'updates the requested collection' do
         collection = Collection.create! valid_attributes
-        put :update, params: {id: collection.to_param, collection: new_attributes}
+        put :update, params: { id: collection.to_param, collection: new_attributes }
         # collection.reload
         expect(assigns(:collection).name).to eq 'holla'
       end
 
       it 'assigns the requested collection as @collection' do
         collection = Collection.create! valid_attributes
-        put :update, params: {id: collection.to_param, collection: valid_attributes}
+        put :update, params: { id: collection.to_param, collection: valid_attributes }
         expect(assigns(:collection)).to eq(collection)
       end
 
@@ -113,7 +113,7 @@ RSpec.describe CollectionsController, type: :controller do
 
       it 'redirects to the collection' do
         collection = Collection.create! valid_attributes
-        put :update, params: {id: collection.to_param, collection: valid_attributes}
+        put :update, params: { id: collection.to_param, collection: valid_attributes }
         expect(response).to redirect_to(collection)
       end
     end
@@ -130,16 +130,15 @@ RSpec.describe CollectionsController, type: :controller do
   describe 'DELETE #destroy' do
     it 'destroys the requested collection' do
       collection = Collection.create! valid_attributes
-      expect {
-        delete :destroy, params: {id: collection.to_param}
-      }.to change(Collection, :count).by(-1)
+      expect do
+        delete :destroy, params: { id: collection.to_param }
+      end.to change(Collection, :count).by(-1)
     end
 
     it 'redirects to the collections list' do
       collection = Collection.create! valid_attributes
-      delete :destroy, params: {id: collection.to_param}
+      delete :destroy, params: { id: collection.to_param }
       expect(response).to redirect_to(collections_url)
     end
   end
-
 end

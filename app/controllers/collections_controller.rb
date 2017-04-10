@@ -11,8 +11,7 @@ class CollectionsController < ApplicationController
   end
 
   # GET /collections/1
-  def show
-  end
+  def show; end
 
   # GET /collections/new
   def new
@@ -20,8 +19,7 @@ class CollectionsController < ApplicationController
   end
 
   # GET /collections/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /collections
   def create
