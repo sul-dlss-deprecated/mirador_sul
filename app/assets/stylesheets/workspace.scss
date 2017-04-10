@@ -37,8 +37,13 @@
     opacity: 1;
     transition: all 0.2s ease-out;
   }
-  h3 a {
-    color: $dark-accent-text;
+  h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    a {
+      color: $dark-accent-text;
+    }
   }
   &>p {
     display: block;
