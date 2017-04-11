@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20170410164012) do
     t.integer  "user_id"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
-    t.text     "description"
     t.integer  "workspaces_count", default: 0
+    t.text     "description"
     t.index ["user_id"], name: "index_collections_on_user_id"
   end
 

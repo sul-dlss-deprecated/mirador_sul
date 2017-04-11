@@ -13,6 +13,16 @@
   width: 100%;
 }
 
+.sidePanel li>h2 {
+  font-size: 1.5em;
+}
+.sidePanel li>h3 {
+  font-size: 1.17em;
+}
+.sidePanel li>h4, .sidePanel li>h5, .sidePanel li>h6 {
+  font-size: 1em;
+}
+
 .grid-item {
   box-shadow: 3px 3px 10px black;
   color: $dark-accent-text;
