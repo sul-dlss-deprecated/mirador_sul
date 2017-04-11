@@ -1,24 +1,24 @@
 $(document).on('ready', function(){
 
-  myMiradorInstance.eventEmitter.subscribe('mainMenuInitialized', function() {
-    $('.save').on('click', function(){
-      var currentConfig = myMiradorInstance.saveController.currentConfig;
-      var workspaceUpdateUrl = $('#viewer').data('workspace-update-url');
+  if (typeof myMiradorInstance !== 'undefined') {
+    myMiradorInstance.eventEmitter.subscribe('mainMenuInitialized', function() {
+      $('.save').on('click', function(){
+        var currentConfig = myMiradorInstance.saveController.currentConfig;
+        var workspaceUpdateUrl = $('#viewer').data('workspace-update-url');
 
-      var updateData = {
-        "workspace": {
-          "data": JSON.stringify(currentConfig)
-        }
-      };
+        var updateData = {
+          "workspace": {
+            "data": JSON.stringify(currentConfig)
+          }
+        };
 
-      $.ajax({
-        url: workspaceUpdateUrl,
-        type: "PUT",
-        data: updateData,
-        beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+        $.ajax({
+          url: workspaceUpdateUrl,
+          type: "PUT",
+          data: updateData,
+          beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+        });
       });
-
     });
-  });
-  
+  }
 });
