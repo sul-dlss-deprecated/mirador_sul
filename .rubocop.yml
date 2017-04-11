@@ -8,3 +8,7 @@ AllCops:
     - 'Gemfile'
     - 'Capfile'
     - 'vendor/bundle/**/*'
+
+RSpec/ExpectActual:
+  Exclude:
+    - 'spec/routing/*.rb'

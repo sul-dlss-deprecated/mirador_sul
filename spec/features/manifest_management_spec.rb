@@ -24,7 +24,7 @@ RSpec.feature 'Manifest Management', type: :feature do
       expect(page).to have_css 'li', text: 'http://example.com/iiif/manifest2.json'
       click_link 'Destroy'
 
-      expect('Manifest was successfully destroyed.')
+      expect(page).to have_content('Manifest was successfully destroyed.')
       expect(page).not_to have_css 'li', text: 'http://example.com/iiif/manifest2.json'
     end
   end

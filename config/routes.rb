@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :workspaces, only: [:index, :show, :destroy, :edit, :update]
+  resources :annotations, except: [:new, :edit, :update], defaults: { format: :json }
 
   mount MiradorRails::Engine, at: MiradorRails::Engine.locales_mount_path
 end
