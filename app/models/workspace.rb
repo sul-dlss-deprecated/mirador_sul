@@ -14,7 +14,15 @@ class Workspace < ApplicationRecord
   # Proxying data through mirador_options
   # for consistency with Collection
   def mirador_options
-    merge_user_logo(JSON.parse(data)).to_json
+    config = merge_user_logo(JSON.parse(data)).deep_symbolize_keys
+    config[:annotationEndpoint] = {
+      name: 'Storage',
+      module: 'Endpoint',
+      options: {
+        endpoint: Rails.application.routes.url_helpers.annotations_path
+      }
+    }
+    config.to_json
   end
 
   private

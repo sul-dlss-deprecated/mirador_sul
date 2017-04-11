@@ -12,6 +12,18 @@
 
 ActiveRecord::Schema.define(version: 20170410164012) do
 
+  create_table "annotations", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "uuid"
+    t.string   "canvas"
+    t.binary   "data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["canvas"], name: "index_annotations_on_canvas"
+    t.index ["user_id"], name: "index_annotations_on_user_id"
+    t.index ["uuid"], name: "index_annotations_on_uuid"
+  end
+
   create_table "collections", force: :cascade do |t|
     t.string   "name"
     t.integer  "user_id"
