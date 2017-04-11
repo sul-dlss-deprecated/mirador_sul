@@ -1,48 +1,42 @@
-<div class="row">
-  <div class="col-md-12">
-    <div class='demo-video-masthead'>
-      <div class='masthead-content'>
-        <%= image_tag 'mirador-logo.png' %>
-        <h2 class='brand'><%= t(:application_name) %></h2>
-        <p>Discover. Compare. Zoom. Annotate. Share.</p>
-        <%= link_to 'Learn more', page_path('about-iiif'), class: 'btn btn-lg btn-outline-secondary' %>
-      </div>
+<div id="masthead-area">
+  <div class='demo-video-masthead'>
+    <div class='masthead-content'>
+      <%= image_tag 'mirador-logo.png' %>
+      <h2 class='brand'><%= t(:application_name) %></h2>
+      <p>Discover. Compare. Zoom. Annotate. Share.</p>
+      <%= link_to 'Learn more', page_path('about-iiif'), class: 'btn btn-lg btn-outline-secondary' %>
     </div>
     <video class='masthead-video' autoplay muted loop>
       <source src="https://github.com/sul-dlss/mirador_sul/blob/gh-pages/public/media/cal_island_high.mp4?raw=true" type='video/mp4'>
-        Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
-      </video>
+      Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
+    </video>
   </div>
+  <video class='masthead-video' autoplay muted loop>
+    <source src="https://github.com/sul-dlss/mirador_sul/blob/gh-pages/public/media/cal_island_high.mp4?raw=true" type='video/mp4'>
+    Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
+  </video>
 </div>
 
-<!-- <div class="row">
-  <div class="jumbotron jumbotron-fluid col-md-12">
-    <video class='masthead-video' autoplay muted loop>
-      <source src="https://github.com/sul-dlss/mirador_sul/blob/gh-pages/public/media/cal_island_high.mp4?raw=true" type='video/mp4'>
-        Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
-    </video>
-    <div class="container-fluid">
-      <div class="masthead-content">
-        <%= image_tag 'mirador-logo.png' %>
-        <h2 class="brand display-4"><%= t(:application_name) %></h2>
-        <p class="lead">Discover. Compare. Zoom. Annotate. Share.</p>
-        <%= link_to 'Learn more', page_path('about-iiif'), class: 'btn btn-lg btn-outline-secondary' %>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<div id="about">
+<section id="about">
+  <div class="container-fluid content-area">
     <div class="row">
       <div class="col-md-6">
         <h2>Discover</h2>
         <!-- wrap the OR in a span to center before new line -->
-        <p>Drag and drop the IIIF logo into a Mirador window from one of many  digital image collections on the Web. **OR** Copy and paste the link to a IIIF manifest directly into Mirador. **OR** Select  an item from your own collection to add to your Mirador workspace.</p>
+        <p>Drag and drop the IIIF logo into a Mirador window from one of many  digital image collections on the Web.</p>
+        <p class="centered"><i>OR</i></p>
+        <p>Copy and paste the link to a IIIF manifest directly into Mirador.</p>
+        <p class="centered"><i>OR</i></p>
+        <p>Select  an item from your own collection to add to your Mirador workspace.</p>
       </div>
-      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <img src="https://cloud.githubusercontent.com/assets/288005/24924471/c4555210-1ea9-11e7-9c53-30ed5e615615.gif">
+      </div>
     </div>
     <div class="row">
-      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <img src="https://cloud.githubusercontent.com/assets/288005/24924470/c432b232-1ea9-11e7-9f5c-2e7566b3f754.gif">
+      </div>
       <div class="col-md-6">
         <h2>Compare</h2>
         <p>Add another item to the right, to the left, above or below the current window in the workspace.</p>
@@ -54,23 +48,29 @@
         <h2>Zoom</h2>
         <p>Fluidly zoom into high resolution images to see fine details. </p>
       </div>
-      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <img src="http://placehold.it/600x400">
+      </div>
     </div>
     <div class="row">
-      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <img src="http://placehold.it/600x400">
+      </div>
       <div class="col-md-6">
         <h2>Annotate</h2>
         <p>Select text for transcription. Pin notes to images. Draw shapes and lines to highlight areas of interest.</p>
         <p>Color, line style, and fill color are all options to help distinguish different types of annotation in a single image.</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Share</h2>
-        <p>Use the ‘bookmark’ to save a link to your current workspace and share it with others.</p>
-        <p>Sharing a workspace is like sharing a presentation of your collection. The link will allow others to see the workspace just as you saved it, including the arrangement of windows, the zoom levels, and the annotations.</p>
-      </div>
-      <div class="col-md-6">
-      </div>
-    </div>
-</div>
+    <!-- <div class="row">
+         <div class="col-md-6">
+         <h2>Share</h2>
+         <p>Use the ‘bookmark’ to save a link to your current workspace and share it with others.</p>
+         <p>Sharing a workspace is like sharing a presentation of your collection. The link will allow others to see the workspace just as you saved it, including the arrangement of windows, the zoom levels, and the annotations.</p>
+         </div>
+         <div class="col-md-6">
+         <img src="http://placehold.it/600x400">
+         </div>
+         </div> -->
+  </div>
+</section>
