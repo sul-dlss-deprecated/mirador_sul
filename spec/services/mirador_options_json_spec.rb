@@ -59,4 +59,13 @@ RSpec.describe MiradorOptionsJson, type: :service do
       end
     end
   end
+
+  describe 'configuring the annotationEndpoint' do
+    it 'is included' do
+      json = JSON.parse(mirador_options.to_json)
+      expect(json['annotationEndpoint']).to be_present
+      expect(json['annotationEndpoint']['name']).to eq 'Storage'
+      expect(json['annotationEndpoint']['module']).to eq 'Endpoint'
+    end
+  end
 end

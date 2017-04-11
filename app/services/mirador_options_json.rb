@@ -12,17 +12,21 @@ class MiradorOptionsJson
   delegate :collection, :data, :name, :new_record?, to: :workspace
 
   def to_json
-    json = if data.blank?
+    json = if parsed_data.blank?
              new_workspace_options
            else
-             JSON.parse(data)
+             parsed_data
            end
-    %i(merge_user_logo merge_user_button).each_with_object(json) do |meth, hash|
+    %i(merge_user_logo merge_user_button merge_annotation_endpoint).each_with_object(json) do |meth, hash|
       send(meth, hash)
     end.to_json
   end
 
   private
+
+  def parsed_data
+    JSON.parse(data)
+  end
 
   def merge_user_logo(hash)
     hash['mainMenuSettings'] ||= {}
@@ -59,6 +63,16 @@ class MiradorOptionsJson
     end
   end
 
+  def merge_annotation_endpoint(hash)
+    hash['annotationEndpoint'] = {
+      name: 'Storage',
+      module: 'Endpoint',
+      options: {
+        endpoint: context.annotations_path
+      }
+    }
+  end
+
   def new_workspace_options
     {
       id: 'viewer',
@@ -92,6 +106,10 @@ class MiradorOptionsJson
   class NullContext
     def can?(*)
       false
+    end
+
+    def annotations_path(*)
+      '/'
     end
   end
 end
