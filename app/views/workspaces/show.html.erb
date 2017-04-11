@@ -1,9 +1,7 @@
 <div id="viewer" data-workspace-update-url="<%= workspace_path(@workspace, format: :json) %>"></div>
 
 <script>
-  $(function() {
-    myMiradorInstance = Mirador(
-      <%= @workspace.mirador_options.html_safe %>
-    );
-  });
+  myMiradorInstance = Mirador(
+    <%= @workspace.mirador_options.html_safe %>
+  );
 </script>
