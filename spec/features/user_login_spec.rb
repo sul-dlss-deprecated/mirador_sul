@@ -37,4 +37,26 @@ RSpec.feature 'User creation/login', type: :feature do
 
     expect(current_path).to eql(collections_path)
   end
+  scenario 'After login, user is shown a successful login message' do
+    create(:user, email: 'yolo@example.com')
+    visit root_path
+    click_link 'Log in'
+
+    fill_in 'Email', with: 'yolo@example.com'
+    fill_in 'Password', with: 'password'
+    click_button 'Log in'
+
+    expect(page).to have_css 'div.messages div.alert-info', text: 'Signed in successfully.'
+  end
+  scenario 'After incorrect login, user is shown an error message' do
+    create(:user, email: 'yolo@example.com')
+    visit root_path
+    click_link 'Log in'
+
+    fill_in 'Email', with: 'yolos@example.com'
+    fill_in 'Password', with: 'password'
+    click_button 'Log in'
+
+    expect(page).to have_css 'div.messages div.alert-danger', text: 'Invalid Email or password.'
+  end
 end

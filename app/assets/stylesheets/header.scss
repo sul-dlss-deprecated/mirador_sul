@@ -14,3 +14,14 @@
     }
   }
 }
+
+.messages {
+  .alert {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  #message-template {
+    display: none;
+  }
+}
