@@ -1,6 +1,6 @@
 $(document).on('ready', function(){
 
-  setTimeout(function(){
+  myMiradorInstance.eventEmitter.subscribe('mainMenuInitialized', function() {
     $('.save').on('click', function(){
       var currentConfig = myMiradorInstance.saveController.currentConfig;
       var workspaceUpdateUrl = $('#viewer').data('workspace-update-url');
@@ -19,6 +19,6 @@ $(document).on('ready', function(){
       });
 
     });
-  }, 1000);
-
+  });
+  
 });
