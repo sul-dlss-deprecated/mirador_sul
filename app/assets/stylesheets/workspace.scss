@@ -63,8 +63,8 @@
 }
 
 .grid-item::before {
-  background-size: cover;
   background: image-url("workspace-placeholder.jpg") no-repeat center center;
+  background-size: cover;
   bottom: 0;
   content: "";
   display: block;
