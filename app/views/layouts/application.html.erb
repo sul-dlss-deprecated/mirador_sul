@@ -14,7 +14,7 @@
 
   <body class="<%= body_classes %>">
     <%= render 'shared/header' %>
-    <div class='container-fluid content-area'>
+    <div class="<%= 'container-fluid content-area' if body_classes != 'pages-show' %>">
       <%= yield %>
     </div>
   </body>
