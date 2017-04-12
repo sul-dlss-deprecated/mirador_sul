@@ -33,11 +33,12 @@
 
   img {
     width: 100%;
+    box-shadow: 3px 3px 10px black;
   }
 
   .row {
     padding-top: $spacer * 1.5;
-    padding-bottom: $spacer * 1.5;
+    padding-bottom: $spacer * 3;
   }
 }
 
