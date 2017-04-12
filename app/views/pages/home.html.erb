@@ -8,7 +8,7 @@
     </div>
   </div>
   <video class='masthead-video' autoplay muted loop>
-    <source src="https://github.com/sul-dlss/mirador_sul/blob/gh-pages/public/media/cal_island_high.mp4?raw=true" type='video/mp4'>
+    <source src="<%= asset_path('home-video.mp4') %>" type='video/mp4'>
       Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
   </video>
 </div>
@@ -25,12 +25,12 @@
         <p>Select  an item from your own collection to add to your Mirador workspace.</p>
       </div>
       <div class="col-md-6">
-        <img src="https://cloud.githubusercontent.com/assets/288005/24924471/c4555210-1ea9-11e7-9c53-30ed5e615615.gif">
+        <%= image_tag('home-discover.gif') %>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6">
-        <img src="https://cloud.githubusercontent.com/assets/288005/24924470/c432b232-1ea9-11e7-9f5c-2e7566b3f754.gif">
+        <%= image_tag('home-compare.gif') %>
       </div>
       <div class="col-md-6">
         <h2>Compare</h2>
@@ -44,12 +44,12 @@
         <p>Fluidly zoom into high resolution images to see fine details. </p>
       </div>
       <div class="col-md-6">
-        <img src="https://cloud.githubusercontent.com/assets/288005/24934112/93a577d8-1ece-11e7-83e5-94959007b117.gif">
+        <%= image_tag('home-zoom.gif') %>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6">
-      <img src="https://cloud.githubusercontent.com/assets/288005/24935438/f4c11db2-1ed6-11e7-8604-12e26ea41f08.gif">
+      <%= image_tag('home-annotate.gif') %>
       </div>
       <div class="col-md-6">
         <h2>Annotate</h2>
