@@ -6,7 +6,9 @@ class WorkspacesController < ApplicationController
   load_and_authorize_resource :workspace, only: [:index, :show, :destroy, :edit, :update]
 
   # GET /workspaces
-  def index; end
+  def index
+    @workspaces = Workspace.where(user: current_user)
+  end
 
   # GET /collections/:collection_id/workspaces/new
   def new; end
@@ -51,6 +53,6 @@ class WorkspacesController < ApplicationController
   private
 
   def workspace_params
-    params.require(:workspace).permit(:data, :description, :name)
+    params.require(:workspace).permit(:data, :description, :name, :public)
   end
 end
