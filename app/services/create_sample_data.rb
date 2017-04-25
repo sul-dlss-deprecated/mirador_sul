@@ -10,14 +10,8 @@ class CreateSampleData
   end
 
   def save
-    collection_params = {
-      name: @name,
-      description: @description,
-      user: @user
-    }
-    collection = Collection.new(collection_params)
+    collection = Collection.new(name: @name, description: @description, user: @user)
     collection.save
-
     @manifests.each do |url|
       manifest = Manifest.new(url: url)
       manifest.collections << collection
