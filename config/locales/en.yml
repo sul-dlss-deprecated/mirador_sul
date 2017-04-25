@@ -25,6 +25,7 @@ en:
       manifest:
         url: Manifest URL
   application_name: mirador@stanford
+  version_text: alpha
   collections:
     navbar: Collections
     create: Collection was successfully created.
