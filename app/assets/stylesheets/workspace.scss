@@ -11,6 +11,17 @@
   height: calc(100% - 55px); // should be $navbar-brand-height but the variable is not available
   position: fixed;
   width: 100%;
+  // Override bootstrap styles on viewer
+  // navigation control overlays
+  a:not([href]):not([tabindex]).hud-control {
+    color: white;
+  }
+  a:not([href]):not([tabindex]):focus.hud-control {
+    color: white;
+  }
+  a:not([href]):not([tabindex]):hover.hud-control {
+    color: white;
+  }
 }
 
 .sidePanel li>h2 {
