@@ -13,21 +13,8 @@
       "https://iiif.lib.harvard.edu/manifests/drs:45914739",
       "https://purl.stanford.edu/md523vh5307/iiif/manifest",
       "https://purl.stanford.edu/mt022cf4461/iiif/manifest",
-      "http://gallica.bnf.fr/iiif/ark:/12148/btv1b6000427q/manifest.json",
-      "http://gallica.bnf.fr/iiif/ark:/12148/btv1b60007960/manifest.json",
-      "https://purl.stanford.edu/rc649zq1322/iiif/manifest.json",
-      "https://purl.stanford.edu/sh650xt9291/iiif/manifest.json",
-      "http://www.e-codices.unifr.ch/metadata/iiif/sl-0002/manifest.json",
-      "http://www.e-codices.unifr.ch/metadata/iiif/bge-cl0015/manifest.json",
-      "http://www.e-codices.unifr.ch/metadata/iiif/fmb-cb-0600a/manifest.json",
-      "http://digi.vatlib.it/iiif/MSS_Vat.lat.3225/manifest.json",
-      "http://manifests.ydc2.yale.edu/manifest/BeineckeMS10",
-      "http://manifests.ydc2.yale.edu/manifest/Admont43",
-      "http://dms-data.stanford.edu/data/manifests/huntington/el26c9/manifest.json",
-      "http://dams.llgc.org.uk/iiif/2.0/4628556/manifest.json",
-      "http://www.e-codices.unifr.ch/metadata/iiif/fmb-cb-0048/manifest.json",
-      "http://iiif.bodleian.ox.ac.uk/iiif/manifest/34f8370b-15d7-435e-8a83-ad6803dd05cd.json",
-      "http://iiif.bodleian.ox.ac.uk/iiif/manifest/b793b75b-1888-4f3c-8031-437cd0b9fae2.json"
+      "https://purl.stanford.edu/rc649zq1322/iiif/manifest",
+      "https://purl.stanford.edu/sh650xt9291/iiif/manifest"
     ]
   },
   "art": {
@@ -44,21 +31,30 @@
       "https://iiif.lib.harvard.edu/manifests/drs:45914739",
       "https://purl.stanford.edu/md523vh5307/iiif/manifest",
       "https://purl.stanford.edu/mt022cf4461/iiif/manifest",
-      "http://gallica.bnf.fr/iiif/ark:/12148/btv1b6000427q/manifest.json",
-      "http://gallica.bnf.fr/iiif/ark:/12148/btv1b60007960/manifest.json",
-      "https://purl.stanford.edu/rc649zq1322/iiif/manifest.json",
-      "https://purl.stanford.edu/sh650xt9291/iiif/manifest.json",
-      "http://www.e-codices.unifr.ch/metadata/iiif/sl-0002/manifest.json",
-      "http://www.e-codices.unifr.ch/metadata/iiif/bge-cl0015/manifest.json",
-      "http://www.e-codices.unifr.ch/metadata/iiif/fmb-cb-0600a/manifest.json",
-      "http://digi.vatlib.it/iiif/MSS_Vat.lat.3225/manifest.json",
-      "http://manifests.ydc2.yale.edu/manifest/BeineckeMS10",
-      "http://manifests.ydc2.yale.edu/manifest/Admont43",
-      "http://dms-data.stanford.edu/data/manifests/huntington/el26c9/manifest.json",
-      "http://dams.llgc.org.uk/iiif/2.0/4628556/manifest.json",
-      "http://www.e-codices.unifr.ch/metadata/iiif/fmb-cb-0048/manifest.json",
-      "http://iiif.bodleian.ox.ac.uk/iiif/manifest/34f8370b-15d7-435e-8a83-ad6803dd05cd.json",
-      "http://iiif.bodleian.ox.ac.uk/iiif/manifest/b793b75b-1888-4f3c-8031-437cd0b9fae2.json"
+      "https://purl.stanford.edu/rc649zq1322/iiif/manifest",
+      "https://purl.stanford.edu/sh650xt9291/iiif/manifest"
+    ]
+  },
+  "maps": {
+    "name": "Sample Map Collection",
+    "description": "Here is a collection of map manifests to get started.",
+    "manifests": [
+      "https://purl.stanford.edu/dd649qk9878/iiif/manifest",
+      "https://purl.stanford.edu/sy409bk9698/iiif/manifest",
+      "https://purl.stanford.edu/vw323gf4937/iiif/manifest",
+      "https://purl.stanford.edu/nh040md8464/iiif/manifest",
+      "https://purl.stanford.edu/kf174zz2862/iiif/manifest",
+      "https://purl.stanford.edu/yg670wy9796/iiif/manifest",
+      "https://purl.stanford.edu/yp997db9527/iiif/manifest",
+      "https://purl.stanford.edu/sg334kr4687/iiif/manifest",
+      "https://purl.stanford.edu/vr219rp4748/iiif/manifest",
+      "https://purl.stanford.edu/bg864yk4109/iiif/manifest",
+      "https://purl.stanford.edu/fh912bx9878/iiif/manifest",
+      "https://purl.stanford.edu/sz557xs2372/iiif/manifest",
+      "https://purl.stanford.edu/vj377yr4487/iiif/manifest",
+      "https://purl.stanford.edu/my058qr3946/iiif/manifest",
+      "https://purl.stanford.edu/bh905pv0483/iiif/manifest",
+      "https://purl.stanford.edu/xx635rt4156/iiif/manifest"
     ]
   }
 }
