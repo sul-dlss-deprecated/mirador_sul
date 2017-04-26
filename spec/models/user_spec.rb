@@ -57,4 +57,19 @@ RSpec.describe User, type: :model do
       expect(subject.source).to eq('sunetid')
     end
   end
+
+  context 'user with sample data' do
+    let(:subject) { create(:user_sample_data) }
+
+    it 'valid and source is sample' do
+      expect(subject.valid?).to be_truthy
+      expect(subject.source).to eq('sample')
+    end
+
+    it 'has collections and manifests' do
+      samples = JSON.parse(File.read('config/sample_data.json')).deep_symbolize_keys
+      expect(subject.collections.size).to eq(samples.length)
+      expect(subject.manifests.size).to eq(samples.values.map { |col| col[:manifests].length }.sum)
+    end
+  end
 end

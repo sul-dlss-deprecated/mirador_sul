@@ -1,0 +1,57 @@
+{
+  "manuscripts": {
+    "name": "Sample Manuscript Collection",
+    "description": "Here is a collection of manuscript manifests to get started.",
+    "manifests": [
+      "https://purl.stanford.edu/gp178js1323/iiif/manifest",
+      "https://iiif.lib.harvard.edu/manifests/drs:7271429",
+      "https://purl.stanford.edu/yw968mp6537/iiif/manifest",
+      "https://purl.stanford.edu/cb532cr9486/iiif/manifest",
+      "https://purl.stanford.edu/fx508wc9951/iiif/manifest",
+      "https://iiif.lib.harvard.edu/manifests/drs:10614144",
+      "https://iiif.lib.harvard.edu/manifests/drs:6273530",
+      "https://iiif.lib.harvard.edu/manifests/drs:45914739",
+      "https://purl.stanford.edu/md523vh5307/iiif/manifest",
+      "https://purl.stanford.edu/mt022cf4461/iiif/manifest",
+      "https://purl.stanford.edu/rc649zq1322/iiif/manifest",
+      "https://purl.stanford.edu/sh650xt9291/iiif/manifest"
+    ]
+  },
+  "art": {
+    "name": "Sample Art Collection",
+    "description": "Here is a collection of art manifests to get started.",
+    "manifests": [
+      "https://labs2.artstor.org/iiif/ssc/collection_id/7731005/manifest.json",
+      "https://labs2.artstor.org/iiif/ssc/collection_id/7730861/manifest.json",
+      "https://labs2.artstor.org/iiif/ssc/collection_id/7730819/manifest.json",
+      "https://wellcomelibrary.org/iiif/b11599820/manifest",
+      "https://manifests.britishart.yale.edu/manifest/6129",
+      "https://media.nga.gov/public/manifests/nga_highlights.json",
+      "https://manifests.britishart.yale.edu/manifest/5005",
+      "https://data.ucd.ie/api/img/manifests/ucdlib:30708",
+      "https://purl.stanford.edu/wh234bz9013/iiif/manifest"
+    ]
+  },
+  "maps": {
+    "name": "Sample Map Collection",
+    "description": "Here is a collection of map manifests to get started.",
+    "manifests": [
+      "https://purl.stanford.edu/dd649qk9878/iiif/manifest",
+      "https://purl.stanford.edu/sy409bk9698/iiif/manifest",
+      "https://purl.stanford.edu/vw323gf4937/iiif/manifest",
+      "https://purl.stanford.edu/nh040md8464/iiif/manifest",
+      "https://purl.stanford.edu/kf174zz2862/iiif/manifest",
+      "https://purl.stanford.edu/yg670wy9796/iiif/manifest",
+      "https://purl.stanford.edu/yp997db9527/iiif/manifest",
+      "https://purl.stanford.edu/sg334kr4687/iiif/manifest",
+      "https://purl.stanford.edu/vr219rp4748/iiif/manifest",
+      "https://purl.stanford.edu/bg864yk4109/iiif/manifest",
+      "https://purl.stanford.edu/fh912bx9878/iiif/manifest",
+      "https://purl.stanford.edu/sz557xs2372/iiif/manifest",
+      "https://purl.stanford.edu/vj377yr4487/iiif/manifest",
+      "https://purl.stanford.edu/my058qr3946/iiif/manifest",
+      "https://purl.stanford.edu/bh905pv0483/iiif/manifest",
+      "https://purl.stanford.edu/xx635rt4156/iiif/manifest"
+    ]
+  }
+}

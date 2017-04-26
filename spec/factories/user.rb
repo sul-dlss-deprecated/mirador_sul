@@ -6,12 +6,33 @@ FactoryGirl.define do
     sequence(:email) { |n| "jdoe#{n}@example.com" }
     source 'local'
     password 'password'
+    after(:build) do |user|
+      class << user
+        def create_sample_data
+          true
+        end
+      end
+    end
   end
 
   factory :user_stanford, class: User do
     name
     sequence(:email) { |n| "jdoe#{n}@stanford.edu" }
     source 'sunetid'
+    password 'password'
+    after(:build) do |user|
+      class << user
+        def create_sample_data
+          true
+        end
+      end
+    end
+  end
+
+  factory :user_sample_data, class: User do
+    name
+    sequence(:email) { |n| "jdoe#{n}@example.com" }
+    source 'sample'
     password 'password'
   end
 end
