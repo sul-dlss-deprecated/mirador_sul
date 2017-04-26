@@ -7,4 +7,10 @@ class User < ApplicationRecord
   has_many :collections
   has_many :manifests, -> { distinct }, through: :collections # the User's library
   has_many :annotations
+
+  after_create :create_sample_data
+
+  def create_sample_data
+    CreateSampleData.for_user(self)
+  end
 end
