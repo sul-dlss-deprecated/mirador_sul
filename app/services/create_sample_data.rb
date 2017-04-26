@@ -10,13 +10,22 @@ class CreateSampleData
   end
 
   def save
-    collection = Collection.new(name: @name, description: @description, user: @user)
-    collection.save
+    collection = Collection.create(name: @name, description: @description, user: @user)
     @manifests.each do |url|
-      manifest = Manifest.new(url: url)
-      manifest.collections << collection
-      manifest.user = @user
-      manifest.save
+      Manifest.create(
+        url: url,
+        collections: [collection],
+        user: @user
+      )
+    end
+  end
+
+  def self.for_user(user)
+    samples = JSON.parse(File.read('config/sample_data.json'))
+    samples.deep_symbolize_keys!
+    samples.values.each do |sample|
+      sample[:user] = user
+      CreateSampleData.new(sample).save
     end
   end
 end

@@ -11,11 +11,6 @@ class User < ApplicationRecord
   after_create :create_sample_data
 
   def create_sample_data
-    samples = JSON.parse(File.read('config/sample_data.json'))
-    samples.deep_symbolize_keys!
-    samples.values.each do |sample|
-      sample[:user] = self
-      CreateSampleData.new(sample).save
-    end
+    CreateSampleData.for_user(self)
   end
 end
