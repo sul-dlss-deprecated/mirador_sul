@@ -16,6 +16,7 @@
     <%= render 'shared/header' %>
     <div class="<%= 'container-fluid content-area' if body_classes != 'pages-show' %>">
       <%= yield %>
+    <%= render 'shared/footer' if body_classes != 'workspaces-show' %>
     </div>
   </body>
 </html>
