@@ -17,8 +17,8 @@
       "https://purl.stanford.edu/sh650xt9291/iiif/manifest"
     ]
   },
-  "art": {
-    "name": "Sample Art Collection",
+  "images": {
+    "name": "Sample Images Collection",
     "description": "Here is a collection of art manifests to get started.",
     "manifests": [
       "https://labs2.artstor.org/iiif/ssc/collection_id/7731005/manifest.json",
@@ -29,7 +29,8 @@
       "https://media.nga.gov/public/manifests/nga_highlights.json",
       "https://manifests.britishart.yale.edu/manifest/5005",
       "https://data.ucd.ie/api/img/manifests/ucdlib:30708",
-      "https://purl.stanford.edu/wh234bz9013/iiif/manifest"
+      "https://purl.stanford.edu/wh234bz9013/iiif/manifest",
+      "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb00107517/manifest"
     ]
   },
   "maps": {
