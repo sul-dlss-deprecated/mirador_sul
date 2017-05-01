@@ -1,6 +1,11 @@
 $(document).on('ready', function(){
 
   var messageButton = $('.messages .alert button');
+  var autoCloseMessage = function() {
+    setTimeout(function() {
+      $('.messages .alert button.close').click();
+    }, 3000);
+  };
   messageButton.attr('data-dismiss', '');
   messageButton.on('click', function(e) {
     var parent = $(this).parent();
@@ -8,15 +13,17 @@ $(document).on('ready', function(){
     parent.addClass('hide');
     parent.fadeOut('hide');
   });
+  autoCloseMessage();
 
   var showMessage = function(message, type) {
     type = type || 'info';
     var messageContainer = $('.messages .alert-'+ type);
-    messageContainer.closest('span').remove();
+    messageContainer.find('button').next('span').remove();
     messageContainer.find('button').after('<span>'+ message +'</span>');
     messageContainer.removeClass('hide');
     messageContainer.addClass('show');
     messageContainer.fadeIn('slow');
+    autoCloseMessage();
   }
 
   if (typeof myMiradorInstance !== 'undefined') {
