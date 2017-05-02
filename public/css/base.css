@@ -76,12 +76,16 @@ table {
   HTML & BODY
 ============================================================ */
 body {
-  background-color: #2e2e2e;
-  color: #fefefe;
+  background-color: #fff;
+  color: #020202;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 15px;
   line-height: 1.5;
 }
+
+h1 {font-size: 2rem; padding: 2em 0;}
+h2 {font-size: 1.5rem; padding: 2em 0;}
+h3 {font-size: 1.2rem; padding: 1.5em 0;}
 
 /* ============================================================
   PRIMARY STRUCTURE
@@ -179,7 +183,7 @@ nav.primary-nav .icon[data-title]:hover:after {
 ============================================================ */
 a {
   text-decoration: none;
-  color: tomato;
+  color: blue;
 }
 
 a:hover {
