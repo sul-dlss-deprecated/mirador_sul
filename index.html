@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
   <link rel="stylesheet" href="public/css/base.css">
-  <link rel="stylesheet" href="public/css/style.css">
 
   <!-- js -->
   <script src="js/modernizr.js"></script>
@@ -21,7 +20,7 @@
 
 <body>
 
-<div class="wrapper demo3">
+<div class="wrapper">
 
   <header class="primary-header clearfix">
     <div class="logo">
@@ -38,56 +37,67 @@
   <main>
     
     <div class="container">
-      <div id="cmn-video-demo4__content">
-        <div class="cmn-video-demo4__content--header">
-        <img src="public/img/core/mirador-logo.png">
-        <h2>Mirador at Stanford</h2>
-        <p>Discover. Compare. Zoom. Annotate. Share.</p>
-        <a href="#">Learn more</a>
-        </div>
-      </div>
-      <!-- <div class="cmn-video-demo4__content-main">-->
 
-<!-- <p>Mirador is much more than an online image viewer. Built on IIF (International Image Interoperability Framework) Mirador makes it possible to draw together high resolution images of paintings, photographs, manuscripts, maps, and digitized documents from collections at Stanford University Libraries, the Bodleian, Folger Shakespeare Library, Davidrumsey.com, NASA Images, Gallica, the Yale Center for British Art, the Wellcome Library and more.</p>
+        <h1 id="miradorstanford-serves-encrypted-https-content">Mirador@Stanford serves encrypted (https) content</h1>
 
-<p>Mirador is an example of what digital does best for research and teaching with images. It provides access to digitized image collections around the world from your desktop. It supplements hands-on work with fragile archival material, allowing mark-up, side-by-side comparison and the ability to zoom in to see the finest details. Both image selections and the notes or transcriptions can be saved and shared with others. These features make both citation and collaboration much easier.</p> 
+<p>If you want to experiment with Mirador using unencrypted content (http) you can view it in the demo site at <a href="http://projectmirador.org/">http://projectmirador.org/</a>.</p>
+
+<p>Here are some sites that serve IIIF content securely. You can open IIIF content from the following sites in Mirador@Stanford:</p>
+
+<h3 id="copy-and-paste-urls-from">Copy and Paste URLs from:</h3>
+
+<p><a href="https://wdl.org/">World Digital Library</a></p>
+
+<p><a href="https://digital.library.wayne.edu/">Digital Collections, Wayne State University </a> (note: add the “s” to the manifest URI)</p>
+
+<p><a href="https://open.library.ubc.ca/">University of British Columbia Open Collections</a> (copy paste from “Embed.” Add the “s” to the manifest URI)</p>
+
+<h3 id="drag-and-drop-the-iiif-icon-from">Drag and Drop the IIIF Icon from:</h3>
+
+<p><a href="https://searchworks.stanford.edu/?f%5Bbuilding_facet%5D%5B%5D=Stanford+Digital+Repository&amp;f%5Bformat_main_ssim%5D%5B%5D=Image">Stanford Digital Repository Images in SearchWorks</a></p>
+
+<p><a href="https://wellcomelibrary.org/">The Library at Wellcome Collection</a></p>
+
+<p><a href="https://www.digitale-sammlungen.de/index.html">Bavarian State Library</a></p>
+
+<h3 id="discover-content-and-construct-a-manifest-uri">Discover content and construct a manifest URI:</h3>
+
+<p><a href="https://archive.org/">Internet Archive</a>  example: <a href="https://iiif.archivelab.org/iiif/%5Bput">https://iiif.archivelab.org/iiif/ </a>[Internet archive item id here] /manifest.json</p>
+
+<h2 id="why-https-some-answers-from-others">Why https? Some answers from others:</h2>
+
+<h3 id="scott-gilbert-wired-magazine"><em>Scott Gilbert, Wired Magazine</em></h3>
+<p>You wouldn’t write your username and passwords on a postcard and mail it for the world to see, so why are you doing it online? Every time you log in to Twitter, Facebook or any other service that uses a plain HTTP connection, that’s essentially what you’re doing.</p>
+
+<p>There is a better way, the secure version of HTTP — HTTPS. That extra “S” in the URL means your connection is secure, and it’s much harder for anyone else to see what you’re doing.</p>
+
+<h3 id="us-chief-information-officer"><em>U.S. Chief Information Officer</em></h3>
+
+<p>HTTPS is the internet’s next phase. The internet’s standards bodies, web browsers, major tech companies, and the internet community of practice have all come to understand that HTTPS should be the baseline for all web traffic.</p>
+
+<ul>
+  <li>The W3C’s Technical Architecture Group has found that <a href="https://www.w3.org/2001/tag/doc/web-https">the web should actively prefer secure connections</a> and transition entirely to HTTPS.</li>
+  <li>The IETF has said that <a href="https://datatracker.ietf.org/doc/rfc7258/">pervasive monitoring is an attack</a>, and the Internet Architecture Board (the IETF’s parent organization) recommends that <a href="https://www.iab.org/2014/11/14/iab-statement-on-internet-confidentiality/">new protocols use encryption by default</a>.</li>
+  <li>The Chrome and <a href="https://blog.mozilla.org/security/2015/04/30/deprecating-non-secure-http/">Firefox</a> security teams are working on <a href="https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure">gradually marking plain HTTP as non-secure</a>.</li>
+</ul>
+
+<p>Ultimately, the goal of the internet community is to establish encryption as the norm, and to phase out unencrypted connections.</p>
+
+<h3 id="google-developers"><em>Google Developers</em></h3>
+
+<p>HTTPS prevents intruders from being able to passively listen to communications between websites and users.</p>
+
+<p>One common misconception about HTTPS is that the only websites that need HTTPS are those that handle sensitive communications. Every unprotected HTTP request can potentially reveal information about the behaviors and identities of your users. Although a single visit to one of your unprotected websites may seem benign, some intruders look at the aggregate browsing activities of your users to make inferences about their behaviors and intentions, and to <a href="https://en.wikipedia.org/wiki/De-anonymization">de-anonymize</a> their identities. For example, employees might inadvertently disclose sensitive health conditions to their employers just by reading unprotected medical articles.</p>
+
+
       </div>
-    </div>-->
 
   </main><!-- /main -->
 
-  <video id="cmn-video-demo4__video" autoplay muted loop>
-    <source src="public/media/cal_island_high.mp4" type="video/mp4">
-    <!-- <source src="media/demo.ogv" type="video/ogg">
-    <source src="media/demo.webm" type="video/webm"> -->
-    Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
-  </video>
   
 </div><!-- /#wrapper -->
 
-<!-- js -->
-<script src="js/polyfill.object-fit.js"></script>
-<script>
-  objectFit.polyfill({
-    selector: 'video',
-    fittype: 'cover'
-  });
-</script>
 
-<!-- ads -->
-<!-- <script src="js/fusionad.js"></script> -->
-
-<!-- analytics -->
-<script type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-34160351-1']);
-_gaq.push(['_trackPageview']);
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-</script>
 
 </body>
 </html>
