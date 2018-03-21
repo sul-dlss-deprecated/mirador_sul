@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 20170410164012) do
 
   create_table "annotations", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "uuid"
-    t.string   "canvas"
-    t.binary   "data"
+    t.integer "user_id"
+    t.string "uuid"
+    t.string "canvas"
+    t.binary "data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["canvas"], name: "index_annotations_on_canvas"
@@ -25,12 +25,12 @@ ActiveRecord::Schema.define(version: 20170410164012) do
   end
 
   create_table "collections", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "user_id"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-    t.integer  "workspaces_count", default: 0
-    t.text     "description"
+    t.string "name"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "workspaces_count", default: 0
+    t.text "description"
     t.index ["user_id"], name: "index_collections_on_user_id"
   end
 
@@ -43,41 +43,41 @@ ActiveRecord::Schema.define(version: 20170410164012) do
   end
 
   create_table "manifests", force: :cascade do |t|
-    t.string   "url",        limit: 4000
-    t.integer  "user_id"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string "url", limit: 4000
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_manifests_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "source"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.string "name"
+    t.string "source"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   create_table "workspaces", force: :cascade do |t|
-    t.string   "name"
-    t.binary   "data",          limit: 64000
-    t.integer  "collection_id"
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
-    t.integer  "user_id"
-    t.text     "description"
-    t.boolean  "public",                      default: false, null: false
+    t.string "name"
+    t.binary "data", limit: 64000
+    t.integer "collection_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.text "description"
+    t.boolean "public", default: false, null: false
     t.index ["collection_id"], name: "index_workspaces_on_collection_id"
     t.index ["public"], name: "index_workspaces_on_public"
     t.index ["user_id"], name: "index_workspaces_on_user_id"

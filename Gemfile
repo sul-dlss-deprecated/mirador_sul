@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.0.2'
+gem 'rails', '~> 5.1.0'
 
 gem 'bcrypt' # password digests
 
@@ -13,7 +13,7 @@ gem 'config'
 gem 'faraday'
 gem 'high_voltage', '~> 3.0.0'
 gem 'devise'
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '4.0.0.alpha6'
 gem 'jquery-rails'
 gem 'cancancan'
 gem 'mirador_rails'
@@ -50,7 +50,7 @@ group :test, :development do
 
   gem 'rspec-rails'
   gem 'rails-controller-testing'
-  gem 'coveralls', require: false
+  gem 'coveralls', '~> 0.8', require: false
   gem 'simplecov'
   gem 'rack-console'
   gem 'rubocop'
