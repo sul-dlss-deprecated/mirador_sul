@@ -31,7 +31,7 @@ RSpec.describe 'collections/_collection', type: :view do
   end
 
   it 'renders the number of workspaces assocated with the collection' do
-    3.times { create(:workspace, collection: collection) }
+    create_list(:workspace, 3, collection: collection)
     render
     expect(rendered).to have_content('3 workspaces created from this collection')
   end
