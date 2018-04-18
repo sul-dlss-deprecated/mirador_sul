@@ -22,7 +22,7 @@ RSpec.describe WorkspacesController, type: :controller do
   describe 'GET #index' do
     context 'a user with collections' do
       it 'lists all their collections' do
-        2.times { create(:workspace, user: user) }
+        create_list(:workspace, 2, user: user)
 
         get :index
         expect(assigns(:workspaces).length).to eq 2
@@ -31,7 +31,7 @@ RSpec.describe WorkspacesController, type: :controller do
 
     context 'a user without collections' do
       it 'does not list public collections' do
-        2.times { create(:workspace, public: true) }
+        create_list(:workspace, 2, public: true)
 
         get :index
         expect(assigns(:workspaces).length).to eq 0
