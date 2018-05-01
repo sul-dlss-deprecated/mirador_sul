@@ -1,10 +1,10 @@
-require 'factory_girl'
+require 'factory_bot'
 require 'database_cleaner'
 
 # see https://github.com/DatabaseCleaner/database_cleaner#rspec-example
 
 RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction

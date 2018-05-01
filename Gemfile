@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.1.0'
+gem 'rails', '~> 5.2.0'
 
 gem 'bcrypt' # password digests
 
@@ -24,6 +24,9 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.1.0', require: false
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
@@ -34,7 +37,9 @@ group :production do
 end
 
 group :development do
-  gem 'listen', '~> 3.0.5'
+  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '>= 3.0.5', '< 3.2'
 end
 
 group :test, :development do
@@ -45,12 +50,11 @@ group :test, :development do
   gem 'byebug', platform: :mri
 
   gem 'sqlite3'
-  gem "factory_girl_rails", "~> 4.8" # for fixture data
+  gem "factory_bot_rails", "~> 4.8" # for fixture data
   gem 'database_cleaner' # for cleaning out fixture data
 
   gem 'rspec-rails'
   gem 'rails-controller-testing'
-  gem 'coveralls', '~> 0.8', require: false
   gem 'simplecov'
   gem 'rack-console'
   gem 'rubocop'

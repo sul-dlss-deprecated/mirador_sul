@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :workspace do
     sequence(:name) { |n| "Workspace #{n}" }
     sequence(:data) { |n| "{ \"some_json_data\": #{n} }" }
