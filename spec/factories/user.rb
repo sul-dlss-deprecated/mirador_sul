@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   sequence(:name) { |n| "John Doe #{n}" }
 
   factory :user, aliases: [:user_local] do

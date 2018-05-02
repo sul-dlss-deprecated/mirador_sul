@@ -82,7 +82,7 @@ RSpec/ExpectInHook:
 # SupportedStyles: implicit, each, example
 RSpec/HookArgument:
   Exclude:
-    - 'spec/support/factory_girl.rb'
+    - 'spec/support/factory_bot.rb'
     - 'spec/support/require_spec_helper.rb'
 
 # Offense count: 1

@@ -128,7 +128,7 @@ RSpec.describe WorkspacesController, type: :controller do
       it 'is not successfull' do
         put :update, params: { id: workspace.id, workspace: invalid_params }
 
-        expect(response).not_to be_success
+        expect(response).not_to be_successful
       end
 
       context 'json request' do
