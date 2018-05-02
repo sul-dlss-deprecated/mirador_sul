@@ -10,12 +10,22 @@ rvm:
 
 cache: bundler
 bundler_args: --without production deployment
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+    - CC_TEST_REPORTER_ID=cd15eb8a83ad244a477d01736dd3ae88b7c3c27edb86a667c2bf4c298e6aadc2
 
 before_script:
   - bin/rails db:test:prepare
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 
 # TODO: running `ci` as the default task always runs `spec` first /shrug
 script: bundle exec rake ci
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 # blocklist
 branches:
