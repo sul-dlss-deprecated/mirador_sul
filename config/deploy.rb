@@ -2,7 +2,7 @@ set :application, "mirador_sul"
 set :repo_url, "https://github.com/sul-dlss/mirador_sul.git"
 
 # Default branch is :master
-ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+set :branch, 'master'
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/opt/app/mirador/#{fetch(:application)}"
