@@ -11,6 +11,7 @@ RSpec.describe User, type: :model do
           subject.collections << create(:collection)
         end
       end
+
       it 'holds them' do
         expect(subject.collections.length).to eq(n)
       end
@@ -23,6 +24,7 @@ RSpec.describe User, type: :model do
           subject.collections.first.manifests << create(:manifest)
         end
       end
+
       it 'holds them' do
         expect(subject.manifests.length).to eq(n)
       end

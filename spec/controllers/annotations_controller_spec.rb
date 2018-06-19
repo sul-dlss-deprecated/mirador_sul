@@ -22,6 +22,7 @@ RSpec.describe AnnotationsController, type: :controller do
       create(:annotation, user: user, canvas: 'http://www.example.com/bad')
       create(:annotation, canvas: 'http://www.example.com/hola')
     end
+
     it 'returns annotations that have the correct canvas uri' do
       get :index, params: { uri: 'http://www.example.com/hola', format: :json }
       expect(response.status).to eq 200
@@ -66,6 +67,7 @@ RSpec.describe AnnotationsController, type: :controller do
       annotation.user = user
       annotation.save
     end
+
     it 'destroys the requested annotation' do
       expect do
         delete :destroy, params: { format: :json, id: annotation.to_param }
