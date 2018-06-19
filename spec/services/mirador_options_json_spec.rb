@@ -26,6 +26,7 @@ RSpec.describe MiradorOptionsJson, type: :service do
 
   describe 'merging the user logoLogo' do
     before { workspace.name = 'workspace_title' }
+
     let(:json) { JSON.parse(mirador_options.to_json) }
     it 'includes the workspace name to the viewer config' do
       expect(json).to have_key 'mainMenuSettings'
@@ -53,6 +54,7 @@ RSpec.describe MiradorOptionsJson, type: :service do
           }
         }.to_json
       end
+
       it 'the save button is removed from the config' do
         json = JSON.parse(mirador_options.to_json)
         expect(json['mainMenuSettings']['userButtons']).to be_blank
