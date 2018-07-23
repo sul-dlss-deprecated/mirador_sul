@@ -24,6 +24,8 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 
+gem 'tinymce-rails', '~> 4.7.13'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
