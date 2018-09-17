@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # Annotation model
 class Annotation < ApplicationRecord

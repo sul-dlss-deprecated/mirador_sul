@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A plain ruby class that returns mirador configuration json given a
 # workspace as well as a controller context (for things like user access)
@@ -46,11 +48,13 @@ class MiradorOptionsJson
     hash['mainMenuSettings'] ||= {}
     hash['mainMenuSettings']['userButtons'] ||= []
     return if config_includes_save_button?(hash)
+
     hash['mainMenuSettings']['userButtons'] << user_button_option
   end
 
   def remove_user_button(hash)
     return unless config_includes_save_button?(hash)
+
     hash['mainMenuSettings']['userButtons'].delete_if do |button_object|
       button_object['label'] == user_button_option[:label]
     end
@@ -58,6 +62,7 @@ class MiradorOptionsJson
 
   def config_includes_save_button?(hash)
     return unless hash['mainMenuSettings'] && hash['mainMenuSettings']['userButtons']
+
     hash['mainMenuSettings']['userButtons'].any? do |button_object|
       button_object['label'] == user_button_option[:label]
     end

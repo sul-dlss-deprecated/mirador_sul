@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A class that takes a user and creates two sample collections with
 # manifests

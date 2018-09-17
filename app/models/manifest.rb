@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Manifest < ApplicationRecord
   validates :url, presence: true
 

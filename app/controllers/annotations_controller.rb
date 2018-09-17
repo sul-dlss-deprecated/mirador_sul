@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # Controller that handles Annotation CRUD
 class AnnotationsController < ApplicationController

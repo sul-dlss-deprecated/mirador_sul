@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Workspace < ApplicationRecord
   validates :name, presence: true
 
@@ -8,6 +10,7 @@ class Workspace < ApplicationRecord
 
   def data
     return {}.to_json if super.blank?
+
     super
   end
 end

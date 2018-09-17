@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # CRUD for Mirador workspaces
 class WorkspacesController < ApplicationController
   load_and_authorize_resource :collection, except: [:index, :show, :destroy, :edit, :update]
