@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Access control
 class Ability
   include CanCan::Ability

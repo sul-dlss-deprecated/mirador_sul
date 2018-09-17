@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # Controller used for a user's collection
 class CollectionsController < ApplicationController

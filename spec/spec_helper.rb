@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'simplecov'
 SimpleCov.start 'rails'
 FIXTURES_PATH = File.expand_path('fixtures', __dir__)
