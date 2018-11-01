@@ -21,7 +21,7 @@ gem 'sul_styles'
 
 # for asset pipeline
 gem 'sass-rails'
-gem 'uglifier'
+gem 'uglifier', '>= 2.7.2', '<= 4.1.18'
 gem 'coffee-rails'
 
 # Reduces boot times through caching; required in config/boot.rb

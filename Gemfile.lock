@@ -322,7 +322,7 @@ GEM
       railties (>= 3.1.1)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.19)
+    uglifier (4.1.18)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.4.0)
     warden (1.2.7)
@@ -380,8 +380,8 @@ DEPENDENCIES
   sqlite3
   sul_styles
   tzinfo-data
-  uglifier
+  uglifier (>= 2.7.2, <= 4.1.18)
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.3
+   1.16.6
