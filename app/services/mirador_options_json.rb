@@ -13,7 +13,7 @@ class MiradorOptionsJson
 
   delegate :collection, :data, :name, :new_record?, to: :workspace
 
-  def to_json
+  def to_json(*args)
     json = if parsed_data.blank?
              new_workspace_options
            else
@@ -21,7 +21,7 @@ class MiradorOptionsJson
            end
     %i(merge_user_logo merge_user_button merge_annotation_endpoint).each_with_object(json) do |meth, hash|
       send(meth, hash)
-    end.to_json
+    end.to_json(*args)
   end
 
   private
