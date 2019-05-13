@@ -58,6 +58,7 @@ group :test, :development do
   gem 'simplecov'
   gem 'rack-console'
   gem 'rubocop'
+  gem 'rubocop-performance'
   gem 'rubocop-rspec'
   gem 'capybara'
 end
