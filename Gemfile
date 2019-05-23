@@ -11,7 +11,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'okcomputer'
 gem 'config'
 gem 'faraday'
-gem 'high_voltage', '~> 3.0.0'
+gem 'high_voltage', '~> 3'
 gem 'devise'
 gem 'bootstrap', '4.0.0.alpha6'
 gem 'jquery-rails'
@@ -49,8 +49,8 @@ group :test, :development do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 
-  gem 'sqlite3', '~> 1.3.13'
-  gem "factory_bot_rails", "~> 4.8" # for fixture data
+  gem 'sqlite3'
+  gem "factory_bot_rails" # for fixture data
   gem 'database_cleaner' # for cleaning out fixture data
 
   gem 'rspec-rails'
