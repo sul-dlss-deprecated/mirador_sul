@@ -12,7 +12,7 @@ RSpec.describe 'Workspaces', type: :request do
 
       it 'is allowed' do
         get new_collection_workspace_path(collection)
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(:ok)
       end
     end
 
@@ -32,7 +32,7 @@ RSpec.describe 'Workspaces', type: :request do
       let(:workspace) { create(:workspace, user: user) }
       it 'is allowed' do
         get workspace_path(workspace)
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(:ok)
       end
     end
 
@@ -41,7 +41,7 @@ RSpec.describe 'Workspaces', type: :request do
 
       it 'is allowed' do
         get workspace_path(workspace)
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(:ok)
       end
     end
 
@@ -61,7 +61,7 @@ RSpec.describe 'Workspaces', type: :request do
       let(:workspace) { create(:workspace, user: user) }
       it 'is allowed' do
         get edit_workspace_path(workspace)
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(:ok)
       end
     end
 
@@ -80,7 +80,7 @@ RSpec.describe 'Workspaces', type: :request do
       let(:collection) { create(:collection, user: user) }
       it 'is allowed' do
         post collection_workspaces_path(collection_id: collection.id, workspace: { name: 'New Workspace 1' })
-        expect(response).to have_http_status(302)
+        expect(response).to have_http_status(:found)
         expect(Workspace.last.name).to eq 'New Workspace 1'
       end
     end
@@ -101,7 +101,7 @@ RSpec.describe 'Workspaces', type: :request do
       it 'is allowed' do
         put workspace_path(id: workspace.id, workspace: { name: 'New Workspace 1' })
 
-        expect(response).to have_http_status(302)
+        expect(response).to have_http_status(:found)
         expect(Workspace.last.name).to eq 'New Workspace 1'
       end
     end
@@ -121,7 +121,7 @@ RSpec.describe 'Workspaces', type: :request do
       let(:workspace) { create(:workspace, user: user) }
       it 'is allowed' do
         delete workspace_path(workspace)
-        expect(response).to have_http_status(302)
+        expect(response).to have_http_status(:found)
       end
     end
 

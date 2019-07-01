@@ -6,7 +6,7 @@ RSpec.describe 'Collections', type: :request do
   describe 'GET /collections' do
     it 'requires authorization' do
       get collections_path
-      expect(response).to have_http_status(302)
+      expect(response).to have_http_status(:found)
     end
     it 'only shows users collections' do
       user = create(:user)
