@@ -13,7 +13,7 @@ RSpec.describe 'Manifests', type: :request do
     describe 'POST /collections/:collection_id/manifests' do
       it 'is allowed' do
         post collection_manifests_path(collection_id: collection.id, manifest: { url: 'ignore' })
-        expect(response).to have_http_status(302)
+        expect(response).to have_http_status(:found)
         expect(Manifest.last.url).to eq 'ignore'
       end
     end
