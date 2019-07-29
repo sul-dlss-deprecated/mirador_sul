@@ -41,7 +41,9 @@ RSpec.describe MiradorOptionsJson, type: :service do
   describe 'configuring the Save userButton' do
     context 'when a user can update the workspace' do
       it 'the save button remains in the config' do
+        # rubocop:disable RSpec/SubjectStub
         expect(mirador_options).to receive_messages(user_can_update_workspace?: true)
+        # rubocop:enable RSpec/SubjectStub
         json = JSON.parse(mirador_options.to_json)
         expect(json['mainMenuSettings']['userButtons'].length).to eq 1
         expect(json['mainMenuSettings']['userButtons'].first['label']).to eq 'Save'

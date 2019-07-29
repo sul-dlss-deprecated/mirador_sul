@@ -15,7 +15,7 @@ RSpec.describe Collection, type: :model do
       it 'orders by the created date so that the most recently created are first' do
         old_collection = create(:collection, created_at: Time.zone.today - 1.day)
         new_collection = create(:collection)
-        all_collections = Collection.all
+        all_collections = described_class.all
 
         expect(all_collections.first).to eq new_collection
         expect(all_collections.last).to eq old_collection
