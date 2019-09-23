@@ -183,7 +183,7 @@ GEM
     mimemagic (0.3.3)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.11.3)
+    minitest (5.12.0)
     mirador_rails (0.8.0)
       font-awesome-rails
       jquery-rails
@@ -289,7 +289,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
-    sassc (2.2.0)
+    sassc (2.2.1)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
       railties (>= 4.0.0)
@@ -297,7 +297,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    simplecov (0.17.0)
+    simplecov (0.17.1)
       docile (~> 1.1)
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
