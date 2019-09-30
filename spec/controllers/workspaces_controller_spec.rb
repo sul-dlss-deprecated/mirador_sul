@@ -15,6 +15,7 @@ RSpec.describe WorkspacesController, type: :controller do
       get :new, params: { collection_id: collection.id }
       expect(assigns(:workspace)).to be_a_new(Workspace)
     end
+
     it 'assigns a the collection as @collection' do
       get :new, params: { collection_id: collection.id }
       expect(assigns(:collection)).to be_a(Collection)

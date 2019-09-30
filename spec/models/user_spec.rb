@@ -30,6 +30,7 @@ RSpec.describe User, type: :model do
       it 'holds them' do
         expect(subject.manifests.length).to eq(n)
       end
+
       it 'removes duplicates' do
         # create a clone of the first collection
         collection = create(:collection)
@@ -38,6 +39,7 @@ RSpec.describe User, type: :model do
 
         expect(subject.manifests.length).to eq(n)
       end
+
       it 'is read-only' do
         expect { subject.manifests << create(:manifest) }.to raise_error(ActiveRecord::HasManyThroughNestedAssociationsAreReadonly)
       end
