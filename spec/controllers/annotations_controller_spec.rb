@@ -30,6 +30,7 @@ RSpec.describe AnnotationsController, type: :controller do
       expect(response.status).to eq 200
       expect(assigns(:annotations).length).to eq 2
     end
+
     it 'requires uri parameter' do
       expect { get :index, params: { format: :json } }.to raise_error ActionController::ParameterMissing, /uri/
     end

@@ -13,6 +13,7 @@ RSpec.feature 'User creation/login', type: :feature do
 
     expect(User.last.email).to eq 'test@example.com'
   end
+
   scenario 'An existing user can login and logout' do
     create(:user, email: 'yolo@example.com')
     visit root_path
@@ -28,6 +29,7 @@ RSpec.feature 'User creation/login', type: :feature do
     click_link 'Log out'
     expect(page).to have_link 'Log in'
   end
+
   scenario 'After login, user is taken to the collections view' do
     create(:user, email: 'yolo@example.com')
     visit root_path
@@ -39,6 +41,7 @@ RSpec.feature 'User creation/login', type: :feature do
 
     expect(current_path).to eql(collections_path)
   end
+
   scenario 'After login, user is shown a successful login message' do
     create(:user, email: 'yolo@example.com')
     visit root_path
@@ -50,6 +53,7 @@ RSpec.feature 'User creation/login', type: :feature do
 
     expect(page).to have_css 'div.messages div.alert-info', text: 'Signed in successfully.'
   end
+
   scenario 'After incorrect login, user is shown an error message' do
     create(:user, email: 'yolo@example.com')
     visit root_path

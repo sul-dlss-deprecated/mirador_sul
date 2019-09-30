@@ -8,6 +8,7 @@ RSpec.describe 'Collections', type: :request do
       get collections_path
       expect(response).to have_http_status(:found)
     end
+
     it 'only shows users collections' do
       user = create(:user)
       create_list(:collection, 5)

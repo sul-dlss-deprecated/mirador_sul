@@ -9,6 +9,7 @@ RSpec.describe Annotation, type: :model do
         described_class.create!(canvas: 'yolo')
       end.to raise_error(ActiveRecord::RecordInvalid, /Uuid/)
     end
+
     it 'requires canvas' do
       expect do
         described_class.create!(uuid: 'yolo')
