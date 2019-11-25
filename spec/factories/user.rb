@@ -17,7 +17,7 @@ FactoryBot.define do
     end
   end
 
-  factory :user_stanford, class: User do
+  factory :user_stanford, class: 'User' do
     name
     sequence(:email) { |n| "jdoe#{n}@stanford.edu" }
     source { 'sunetid' }
@@ -31,7 +31,7 @@ FactoryBot.define do
     end
   end
 
-  factory :user_sample_data, class: User do
+  factory :user_sample_data, class: 'User' do
     name
     sequence(:email) { |n| "jdoe#{n}@example.com" }
     source { 'sample' }
