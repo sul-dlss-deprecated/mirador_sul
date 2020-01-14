@@ -20,3 +20,7 @@ coverage/*
 /spec/examples.txt
 /config/settings/*.local.yml
 db/*.sqlite3
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
