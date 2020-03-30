@@ -6,17 +6,17 @@
     display: inline-flex;
 
     .nav-link{
-      color: $navbar-inverse-color;
+      color: $navbar-dark-color;
 
       @include hover-focus {
-        color: $navbar-inverse-hover-color;
+        color: $navbar-dark-hover-color;
       }
     }
   }
 }
 
 .version-text {
-  color: $navbar-inverse-hover-color;
+  color: $navbar-dark-hover-color;
 }
 
 .messages {

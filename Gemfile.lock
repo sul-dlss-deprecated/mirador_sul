@@ -55,9 +55,10 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.6)
       msgpack (~> 1.0)
-    bootstrap (4.0.0.alpha6)
-      autoprefixer-rails (>= 6.0.3)
-      sass (>= 3.4.19)
+    bootstrap (4.4.1)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 1.14.3, < 2)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     bundler-audit (0.6.1)
       bundler (>= 1.2.0, < 3)
@@ -212,6 +213,7 @@ GEM
     parser (2.7.0.5)
       ast (~> 2.4.0)
     pg (1.2.3)
+    popper_js (1.16.0)
     public_suffix (4.0.3)
     puma (3.12.4)
     rack (2.2.2)
@@ -290,11 +292,6 @@ GEM
       rubocop (>= 0.68.1)
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
-    sass (3.7.4)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.2.1)
@@ -351,7 +348,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   bootsnap (>= 1.1.0)
-  bootstrap (= 4.0.0.alpha6)
+  bootstrap
   byebug
   cancancan
   capistrano (~> 3.6)

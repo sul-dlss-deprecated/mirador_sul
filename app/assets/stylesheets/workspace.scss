@@ -38,8 +38,8 @@
   box-shadow: 3px 3px 10px black;
   color: $dark-accent-text;
   height: $font-size-lg * $line-height-lg * 10;
-  margin-bottom: $grid-gutter-width-base;
-  padding: $grid-gutter-width-base * 0.5;
+  margin-bottom: $spacer;
+  padding: $spacer * 0.5;
   position:relative;
   transition: all 0.2s ease-out;
   .card-link {
@@ -68,7 +68,7 @@
   }
   .btn-group {
     bottom: 0;
-    margin: $grid-gutter-width-base * 0.5;
+    margin: $spacer * 0.5;
     opacity: 0;
     position: absolute;
     right: 0;
