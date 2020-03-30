@@ -47,20 +47,20 @@
 
   .btn-outline-secondary {
     &:focus {
-      color: $btn-secondary-border;
+      color: theme-colors("secondary");
     }
   }
 
   @include media-breakpoint-up(md) {
     h2 {
-      font-size: $font-size-h2;
+      font-size: $h2-font-size;
     }
     font-size: $font-size-base;
   }
 
   @include media-breakpoint-up(lg) {
     h2 {
-      font-size: $font-size-h2 * 1.5;
+      font-size: $h2-font-size * 1.5;
     }
     font-size: $font-size-base * 1.5;
   }

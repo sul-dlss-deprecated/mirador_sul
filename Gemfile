@@ -13,11 +13,12 @@ gem 'config'
 gem 'faraday'
 gem 'high_voltage', '~> 3'
 gem 'devise'
-gem 'bootstrap', '4.0.0.alpha6'
+gem 'bootstrap'
 gem 'jquery-rails'
 gem 'cancancan'
 gem 'mirador_rails'
 gem 'sul_styles'
+gem 'tinymce-rails', '< 5.0'
 
 # for asset pipeline
 gem 'sass-rails'
