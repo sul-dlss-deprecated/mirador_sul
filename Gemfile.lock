@@ -322,7 +322,7 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    tinymce-rails (5.2.1)
+    tinymce-rails (4.9.8)
       railties (>= 3.1.1)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
@@ -383,6 +383,7 @@ DEPENDENCIES
   simplecov
   sqlite3
   sul_styles
+  tinymce-rails (< 5.0)
   tzinfo-data
   uglifier (>= 2.7.2)
   web-console (>= 3.3.0)

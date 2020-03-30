@@ -18,6 +18,7 @@ gem 'jquery-rails'
 gem 'cancancan'
 gem 'mirador_rails'
 gem 'sul_styles'
+gem 'tinymce-rails', '< 5.0'
 
 # for asset pipeline
 gem 'sass-rails'
