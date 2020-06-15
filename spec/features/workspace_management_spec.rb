@@ -32,8 +32,8 @@ RSpec.feature 'Workspace Management', type: :feature do
       }.to_json, user: user)
       visit "/workspaces/#{workspace.id}"
 
-      expect(page).to have_css('script', visible: false, text: /Mirador/)
-      expect(page).to have_css('script', visible: false, text: /#{url}/)
+      expect(page).to have_css('script', visible: :hidden, text: /Mirador/)
+      expect(page).to have_css('script', visible: :hidden, text: /#{url}/)
     end
 
     scenario 'I can edit/update an existing workspace' do
