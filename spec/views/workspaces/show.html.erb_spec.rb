@@ -12,6 +12,6 @@ RSpec.describe 'workspaces/show', type: :view do
   end
 
   it 'renders a mirador script tag' do
-    expect(rendered).to have_css('script', text: /Mirador/, visible: false)
+    expect(rendered).to have_css('script', text: /Mirador/, visible: :hidden)
   end
 end
