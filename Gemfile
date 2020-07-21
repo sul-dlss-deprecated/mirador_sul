@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 6.0'
 
 gem 'bcrypt' # password digests
 
@@ -44,7 +44,7 @@ end
 
 group :test, :development do
   # Use Puma as the app server
-  gem 'puma', '~> 3.0'
+  gem 'puma'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
