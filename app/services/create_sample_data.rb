@@ -25,7 +25,7 @@ class CreateSampleData
   def self.for_user(user)
     samples = JSON.parse(File.read('config/sample_data.json'))
     samples.deep_symbolize_keys!
-    samples.values.each do |sample|
+    samples.each_value do |sample|
       sample[:user] = user
       CreateSampleData.new(sample).save
     end
