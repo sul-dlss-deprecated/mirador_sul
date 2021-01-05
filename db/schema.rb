@@ -35,10 +35,11 @@ ActiveRecord::Schema.define(version: 2020_07_21_231602) do
   end
 
   create_table "collections_manifests", id: false, force: :cascade do |t|
-    t.integer "collection_id"
-    t.integer "manifest_id"
+    t.integer "collection_id", null: false
+    t.integer "manifest_id", null: false
     t.index ["collection_id", "manifest_id"], name: "index_collections_manifests_on_collection_id_and_manifest_id"
     t.index ["collection_id"], name: "index_collections_manifests_on_collection_id"
+    t.index ["manifest_id", "collection_id"], name: "index_collections_manifests_on_manifest_id_and_collection_id"
     t.index ["manifest_id"], name: "index_collections_manifests_on_manifest_id"
   end
 
@@ -88,5 +89,5 @@ ActiveRecord::Schema.define(version: 2020_07_21_231602) do
   add_foreign_key "collections_manifests", "collections"
   add_foreign_key "collections_manifests", "manifests"
   add_foreign_key "manifests", "users"
-  add_foreign_key "workspaces", "collections"
+  add_foreign_key "workspaces", "collections", on_delete: :nullify
 end
