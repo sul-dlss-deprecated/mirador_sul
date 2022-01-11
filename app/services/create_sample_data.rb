@@ -27,7 +27,7 @@ class CreateSampleData
     samples.deep_symbolize_keys!
     samples.each_value do |sample|
       sample[:user] = user
-      CreateSampleData.new(sample).save
+      CreateSampleData.new(**sample).save
     end
   end
 end
